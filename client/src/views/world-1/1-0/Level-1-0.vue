@@ -24,8 +24,11 @@
 <script>
 	export default {
 		name: 'Level-1-0',
-		world: 1,
-		level: 0,
+		info: {
+			world: 1,
+			level: 0,
+			title: 'Introdução'
+		},
 		data: () => ({
 
 		}),

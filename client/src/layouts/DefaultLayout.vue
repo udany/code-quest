@@ -22,7 +22,10 @@
 						:key="levelRoute.name"
 						:to="levelRoute.name"
 					>
-						Level {{levelRoute.world}}-{{levelRoute.level}}
+						<b>
+							{{levelRoute.info.world}}-{{levelRoute.info.level}}
+						</b>
+						{{levelRoute.info.title}}
 					</router-link>
 				</b-col>
 				<b-col class="cq-page-body">
@@ -62,7 +65,6 @@
 	}
 
 	.cq-menu {
-		text-align: center;
 		padding: 1em 0;
 
 		h3 {

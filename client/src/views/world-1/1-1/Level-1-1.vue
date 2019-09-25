@@ -34,8 +34,11 @@
 	export default {
 		name: 'Level-1-1',
 		components: {TestGroup},
-		world: 1,
-		level: 1,
+		info: {
+			world: 1,
+			level: 1,
+			title: 'Molhando os pés'
+		},
 		data: () => ({
 			a: 15,
 			b: 1,
