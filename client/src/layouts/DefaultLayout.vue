@@ -5,7 +5,7 @@
 			<b-container>
 				<b-row align-h="between">
 					<b-col cols="auto" class="py-4">
-						<h1>>Code Quest</h1>
+						<h1>> Code Quest</h1>
 					</b-col>
 				</b-row>
 			</b-container>
