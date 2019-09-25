@@ -1,8 +1,10 @@
 import {sum} from '../../../../../solutions/world-1/1-1';
 import {TestCase, TestGroup} from '../../../../../shared/tests';
 
-export const tests = new TestGroup({
+export const tests = [
+	new TestGroup({
 		name: 'Soma',
+		signature: 'sum(a, b)',
 		fn: sum
 	})
 	.addCase(
@@ -10,4 +12,5 @@ export const tests = new TestGroup({
 			inputs: [10, 12],
 			outputs: 22
 		})
-	);
+	)
+];

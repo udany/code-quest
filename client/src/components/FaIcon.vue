@@ -1,5 +1,5 @@
 <template>
-	<font-awesome-icon class="rb-icon" :icon="iconArray" />
+	<font-awesome-icon class="cq-icon" :icon="iconArray" />
 </template>
 
 <script>

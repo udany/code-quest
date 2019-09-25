@@ -111,9 +111,18 @@ h6 {
 	&-first {
 		color: $first;
 	}
+	&-default {
+		font-family: $font-default;
+	}
 	&-title {
 		font-family: $font-title;
 	}
+}
+
+mark, .mark {
+	padding: 0.1em 0.2em;
+	background-color: #c58923;
+	color: white;
 }
 
 input, textarea {

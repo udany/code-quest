@@ -41,6 +41,7 @@ export class TestCase {
  * @class TestGroup
  *
  * @property {String} name
+ * @property {String} [signature]
  * @property {String} [description]
  * @property {Function} fn
  * @property {TestCase[]} cases
@@ -49,6 +50,7 @@ export class TestGroup {
 	/**
 	 * @typedef {Object} TestGroupOptions
 	 * @property {String} name
+	 * @property {String} [signature]
 	 * @property {String} [description]
 	 * @property {Function} fn
 	 */
@@ -75,10 +77,23 @@ export class TestGroup {
 
 	/**
 	 *
-	 * @param {TestCase} testCase
+	 * @param {TestCase} [testCase]
 	 * @returns {Boolean}
 	 */
 	run(testCase) {
-		return testCase.run(this.fn);
+		if (testCase) {
+			return testCase.run(this.fn);
+		} else {
+			let state = true;
+
+			for (const tc of this.cases) {
+				if (!tc.run(this.fn)) {
+					state = false;
+					break;
+				}
+			}
+
+			return state;
+		}
 	}
 }

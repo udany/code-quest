@@ -1,16 +1,18 @@
 <template>
 	<b-container class="layout-default p-0" fluid>
 		<!-- Header -->
-		<b-container fluid class="cq-header">
-			<b-row align-h="between">
-				<b-col cols="auto" class="py-4">
-					<h1>>Code Quest</h1>
-				</b-col>
-			</b-row>
-		</b-container>
+		<div class="cq-header">
+			<b-container>
+				<b-row align-h="between">
+					<b-col cols="auto" class="py-4">
+						<h1>>Code Quest</h1>
+					</b-col>
+				</b-row>
+			</b-container>
+		</div>
 
 		<!-- Content -->
-		<b-container fluid >
+		<b-container>
 			<b-row class="cq-body">
 				<b-col class="cq-menu" cols="2">
 					<h3>Fases</h3>
@@ -20,7 +22,7 @@
 						:key="levelRoute.name"
 						:to="levelRoute.name"
 					>
-						{{levelRoute.world}}-{{levelRoute.level}}
+						Level {{levelRoute.world}}-{{levelRoute.level}}
 					</router-link>
 				</b-col>
 				<b-col class="cq-page-body">
@@ -45,6 +47,7 @@
 <style lang="scss" scoped>
 	.cq-header {
 		background: #080b10;
+		margin-bottom: 25px;
 
 		h1 {
 			font-size: $font-size-md;
@@ -54,7 +57,7 @@
 	}
 
 	.cq-page-body {
-		padding: 1em .7em;
+		padding: 1em 2em;
 		background: #112b42;
 	}
 
