@@ -3,16 +3,11 @@
 		<h3>Lv 1-1 - Molhando os pés</h3>
 
 		<div class="col-sm-12">
-			<blockquote class="blockquote text-center" style="padding: 1em 1em">
-				<p class="mb-0">
-					Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade.
-				</p>
-
-				<footer class="blockquote-footer">
-					Lemony Snicket em
-					<cite title="A Series of Unfortunate Events: The Penultimate Peril">The Penultimate Peril</cite>
-				</footer>
-			</blockquote>
+			<Quotes
+					quote-text="Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade."
+					author="Lemony Snicket"
+					book="The Penultimate Peril">
+			</Quotes>
 		</div>
 
 		<div class="col-sm">
@@ -28,27 +23,20 @@
 
 <script>
 	import { tests } from './tests';
-	import {sum} from '../../../../../solutions/world-1/1-1';
 	import TestGroup from '../../../components/TestGroup';
+	import Quotes from "../../../components/Quotes";
 
 	export default {
 		name: 'Level-1-1',
-		components: {TestGroup},
+		components: {Quotes, TestGroup},
 		info: {
 			world: 1,
 			level: 1,
 			title: 'Molhando os pés'
 		},
 		data: () => ({
-			a: 15,
-			b: 1,
 			tests
 		}),
-		computed: {
-			sum() {
-				return sum(this.a, this.b);
-			}
-		}
 	}
 </script>
 

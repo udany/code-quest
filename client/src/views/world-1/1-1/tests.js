@@ -1,4 +1,4 @@
-import {subtract, sum} from '../../../../../solutions/world-1/1-1';
+import {divide, multiply, subtract, sum} from '../../../../../solutions/world-1/1-1';
 import {TestCase, TestGroup} from '../../../../../shared/tests';
 
 export const tests = [
@@ -9,8 +9,23 @@ export const tests = [
 	})
 	.addCase(
 		new TestCase({
-			inputs: [10, 12],
-			outputs: 22
+			inputs: [1, 1],
+			outputs: 2
+		})
+	).addCase(
+		new TestCase({
+			inputs: [-8, 10],
+			outputs: 2
+		})
+	).addCase(
+		new TestCase({
+			inputs: [7, 3],
+			outputs: 10
+		})
+	).addCase(
+		new TestCase({
+			inputs: [0.5, 1.5],
+			outputs: 2
 		})
 	),
 	new TestGroup({
@@ -20,8 +35,75 @@ export const tests = [
 	})
 	.addCase(
 		new TestCase({
-			inputs: [12, 10],
+			inputs: [1, 1],
+			outputs: 0
+		})
+	).addCase(
+		new TestCase({
+			inputs: [-8, 10],
+			outputs: -18
+		})
+	).addCase(
+		new TestCase({
+			inputs: [7, 3],
+			outputs: 4
+		})
+	).addCase(
+		new TestCase({
+			inputs: [0.5, 1],
+			outputs: -0.5
+		})
+	),
+	new TestGroup({
+		name: 'Multiplicação',
+		signature: 'multiply(a, b)',
+		fn: multiply
+	})
+		.addCase(
+			new TestCase({
+				inputs: [1, 1],
+				outputs: 1
+			})
+		).addCase(
+		new TestCase({
+			inputs: [-8, 10],
+			outputs: -80
+		})
+	).addCase(
+		new TestCase({
+			inputs: [7, 3],
+			outputs: 21
+		})
+	).addCase(
+		new TestCase({
+			inputs: [0.5, 1],
+			outputs: 0.5
+		})
+	),
+	new TestGroup({
+		name: 'Divisão',
+		signature: 'divide(a, b)',
+		fn: divide
+	})
+		.addCase(
+			new TestCase({
+				inputs: [1, 1],
+				outputs: 1
+			})
+		).addCase(
+		new TestCase({
+			inputs: [-8, 10],
+			outputs: -0.8
+		})
+	).addCase(
+		new TestCase({
+			inputs: [6, 3],
 			outputs: 2
+		})
+	).addCase(
+		new TestCase({
+			inputs: [0.5, 0.5],
+			outputs: 1
 		})
 	),
 ];

@@ -1,0 +1,50 @@
+<template>
+    <div>
+        <h3>Lv 1-2 - Andando pro fundo</h3>
+
+        <div class="col-sm-12">
+            <Quotes
+                    quote-text="Ler é uma forma de escape, correr pela sua vida é outra."
+                    author="Lemony Snicket"
+                    book="The Austere Academy">
+            </Quotes>
+        </div>
+
+        <div class="col-sm">
+            <p>
+                Okay, agora que você já está aquecido vamos para algo mais... <em>Interessante</em>...
+            </p>
+            <p>
+                Abra o arquivo <code>solutions/world-1/1-2/index.js</code> e preencha as funções que nem no nível anterior.
+                Ah, e caso você esteja se perguntando como obter o valor de pi... <a href="http://bfy.tw/F03W" target="_blank">
+                Fica a dica!
+            </a>
+            </p>
+        </div>
+
+        <test-group v-for="test in tests" :key="tests.name" :test="test"></test-group>
+    </div>
+</template>
+
+<script>
+    import Quotes from "../../../components/Quotes";
+    import TestGroup from "../../../components/TestGroup";
+    import {tests} from "./tests";
+
+    export default {
+        name: "Level-1-2",
+        components: {Quotes, TestGroup},
+        info: {
+            world: 1,
+            level: 2,
+            title: 'Andando pro fundo'
+        },
+        data: () => ({
+            tests
+        }),
+    }
+</script>
+
+<style scoped>
+
+</style>
