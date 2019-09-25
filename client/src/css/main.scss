@@ -125,6 +125,12 @@ mark, .mark {
 	color: white;
 }
 
+code {
+	padding: .3em;
+	border-radius: .3em;
+	background: rgba(black, .1);
+}
+
 input, textarea {
 	color: #efefef;
 	background: rgba(0,0,0,.5);
