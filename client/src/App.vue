@@ -13,7 +13,7 @@
 		name: 'App',
 		metaInfo: {
 			titleTemplate: (titleChunk) => {
-				return titleChunk ? `${titleChunk} | Vue Boilerplate` : 'Vue Boilerplate';
+				return titleChunk ? `${titleChunk} | Code Quest` : 'Code Quest';
 			}
 		},
 		computed: {
