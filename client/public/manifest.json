@@ -1,0 +1,20 @@
+{
+  "name": "Vue Boilerplate",
+  "short_name": "Vue Boilerplate",
+  "icons": [
+    {
+      "src": "./img/icons/favicon-256.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./img/icons/favicon-256.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#071126",
+  "theme_color": "#071126"
+}

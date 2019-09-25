@@ -1,2 +1,3 @@
-# code-quest
- Code Quest
+# Code Quest
+
+Plataforma de aprendizado de programação

@@ -1,0 +1,147 @@
+@import "./boostrap";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400,400i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap);
+
+html {
+	font-family: $font-default;
+	font-size: 62.5%;
+}
+body {
+	background: #0D1625;
+	color: $light;
+	font-size: $font-size-sm;
+}
+
+a {
+	color: $light;
+	text-shadow: 0 0 5px rgba(0, 0, 0, .5);
+	transition: all 0.5s ease 0s;
+
+	.rb-icon {
+		filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+		transition: filter 0.5s ease 0s;
+	}
+
+	&:hover, &:focus {
+		text-decoration: none;
+		color: $highlight;
+		text-shadow: 0 0 5px;
+
+		.rb-icon {
+			filter: drop-shadow(0 0 5px currentcolor);
+		}
+	}
+}
+
+a:hover, a:focus {
+	text-decoration: none !important;
+}
+
+img {max-width: 100%;}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-family: $font-title;
+	font-weight: 300;
+	text-shadow: 0 0 15px rgba(50, 50, 50, 1);
+
+	.rb-icon {
+		transform: scale(.8);
+	}
+}
+
+h1 {
+	font-size: $font-size-xxl;
+}
+
+h2 {
+	font-size: $font-size-xl;
+}
+
+h3 {
+	font-size: $font-size-lg;
+}
+
+h4 {
+	font-size: $font-size-md;
+}
+
+h5 {
+	font-size: $font-size-sm;
+}
+
+h6 {
+	font-size: $font-size-xs;
+}
+
+
+@include media-breakpoint-down(xs) {
+	html {
+		font-family: $font-default;
+		font-size: 50%;
+	}
+}
+
+.text {
+	&-xxl {
+		font-size: $font-size-xxl;
+	}
+	&-xl {
+		font-size: $font-size-xl;
+	}
+	&-lg {
+		font-size: $font-size-lg;
+	}
+	&-md {
+		font-size: $font-size-md;
+	}
+	&-sm {
+		font-size: $font-size-sm;
+	}
+	&-xs {
+		font-size: $font-size-xs;
+	}
+	&-xxs {
+		font-size: $font-size-xxs;
+	}
+
+	&-grey {
+		color: $grey;
+	}
+	&-first {
+		color: $first;
+	}
+	&-title {
+		font-family: $font-title;
+	}
+}
+
+input, textarea {
+	color: #efefef;
+	background: rgba(0,0,0,.5);
+	border: none;
+	border-bottom: 1px solid #FCFCFF;
+	padding: 2px 5px;
+	box-shadow: 0 0 20px 0 rgba(50, 50, 50, .5);
+}
+
+input:focus, textarea:focus, button:focus, button:active:focus{
+	outline: none !important;
+}
+
+// Scrollbars
+* {
+	&::-webkit-scrollbar {
+		width: 5px;
+		height: 5px;
+	}
+	&::-webkit-scrollbar-track {
+		background: rgba($dark, .8);
+	}
+	&::-webkit-scrollbar-thumb {
+		box-shadow: inset 0 0 2px rgba($primary, 0.49);
+		border: 1px solid rgba($primary-2, 0.26);
+	}
+}
+
+@import "./transitions";
