@@ -2,20 +2,14 @@
 	<div>
 		<h3>Lv 1-1 - Molhando os pés</h3>
 
-		<div class="col-sm-12">
-			<Quotes
-					quote-text="Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade."
-					author="Lemony Snicket"
-					book="The Penultimate Peril">
-			</Quotes>
-		</div>
+		<Quotes author="Lemony Snicket" book="The Penultimate Peril">
+			Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade.
+		</Quotes>
 
-		<div class="col-sm">
-			<p>
-				Para começar vamos com algo simples, abra o arquivo <code>solutions/world-1/1-1/index.js</code> e preencha as funções
-				nele para que elas retornem os resultados esperados, os testes abaixo irão atualizar conforme você for completando elas.
-			</p>
-		</div>
+		<p>
+			Para começar vamos com algo simples, abra o arquivo <code>solutions/world-1/1-1/index.js</code> e preencha as funções
+			nele para que elas retornem os resultados esperados, os testes abaixo irão atualizar conforme você for completando elas.
+		</p>
 
 		<test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
 	</div>

@@ -1,7 +1,7 @@
 <template>
     <blockquote class="blockquote text-center" style="padding: 1em 1em">
         <p class="mb-0">
-            {{quoteText}}
+            <slot>{{quoteText}}</slot>
         </p>
 
         <footer class="blockquote-footer">

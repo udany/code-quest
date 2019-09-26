@@ -27,6 +27,8 @@
 						</b>
 						{{levelRoute.info.title}}
 					</router-link>
+
+					...
 				</b-col>
 				<b-col class="cq-page-body">
 					<slot></slot>

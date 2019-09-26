@@ -80,5 +80,9 @@
 	.cq-test-box {
 		padding: 1em 1.5em;
 		background: rgba(white, .1);
+
+		.cq-test-case {
+			margin-top: 15px;
+		}
 	}
 </style>

@@ -2,27 +2,22 @@
     <div>
         <h3>Lv 1-2 - Andando pro fundo</h3>
 
-        <div class="col-sm-12">
-            <Quotes
-                    quote-text="Ler é uma forma de escape, correr pela sua vida é outra."
-                    author="Lemony Snicket"
-                    book="The Austere Academy">
-            </Quotes>
-        </div>
+		<Quotes author="Lemony Snicket" book="The Austere Academy">
+			Ler é uma forma de escape, correr pela sua vida é outra.
+		</Quotes>
 
-        <div class="col-sm">
-            <p>
-                Okay, agora que você já está aquecido vamos para algo mais... <em>Interessante</em>...
-            </p>
-            <p>
-                Abra o arquivo <code>solutions/world-1/1-2/index.js</code> e preencha as funções que nem no nível anterior.
-                Ah, e caso você esteja se perguntando como obter o valor de pi...
+		<p>
+			Okay, agora que você já está aquecido vamos para algo mais... <em>Interessante</em>...
+		</p>
 
-				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">
-                	Fica a dica!
-            	</a>
-            </p>
-        </div>
+		<p>
+			Abra o arquivo <code>solutions/world-1/1-2/index.js</code> e preencha as funções que nem no nível anterior.
+			Ah, e caso você esteja se perguntando como obter o valor de pi...
+
+			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">
+				Fica a dica!
+			</a>
+		</p>
 
         <test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
     </div>

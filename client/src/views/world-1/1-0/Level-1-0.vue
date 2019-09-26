@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<h2>
-			Bem Vindo!
+			Bem Vindo ao Code Quest!
 		</h2>
 
 		<p>
-			Abaixo seguem os links para uma série de desafios, vocês devem alterar o código fonte fornecido para
-			completá-los.
+			Aqui você irá encontrar uma série de desafios, para resolvê-los	vocês devem alterar o código fonte
+			fornecido com as suas soluções.
 		</p>
 
 		<p>
@@ -15,7 +15,11 @@
 		</p>
 
 		<p>
-			<small style="color: #aaa">E claro, podem me chamar pra ajudar, sz</small>
+			<small style="color: #aaa">E claro, podem chamar pra pedir ajuda também, sz</small>
+		</p>
+
+		<p class="text-right">
+			<b>Boa viagem e boa sorte! &lt;3</b>
 		</p>
 
 	</div>
