@@ -48,14 +48,21 @@
     import TestGroup from "../../../components/TestGroup";
     import {tests} from "./tests";
 
+    const info = {
+	    world: 1,
+	    level: 3,
+	    title: 'Começando a nadar'
+    };
+
     export default {
         name: "Level-1-3",
         components: {Quotes, TestGroup},
-        info: {
-            world: 1,
-            level: 3,
-            title: 'Começando a nadar'
-        },
+	    info,
+	    metaInfo (){
+		    return {
+			    title: `${info.world}-${info.level} ${info.title}`
+		    }
+	    },
         data: () => ({
             tests
         }),

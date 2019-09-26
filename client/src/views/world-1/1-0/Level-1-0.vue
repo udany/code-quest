@@ -26,15 +26,21 @@
 </template>
 
 <script>
+	const info = {
+		world: 1,
+		level: 0,
+		title: 'Introdução'
+	};
+
 	export default {
 		name: 'Level-1-0',
-		info: {
-			world: 1,
-			level: 0,
-			title: 'Introdução'
+		info,
+		metaInfo (){
+			return {
+				title: `${info.world}-${info.level} ${info.title}`
+			}
 		},
 		data: () => ({
-
 		}),
 	}
 </script>

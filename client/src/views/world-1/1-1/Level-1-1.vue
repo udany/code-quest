@@ -20,13 +20,20 @@
 	import TestGroup from '../../../components/TestGroup';
 	import Quotes from "../../../components/Quotes";
 
+	const info = {
+		world: 1,
+		level: 1,
+		title: 'Molhando os pés'
+	};
+
 	export default {
 		name: 'Level-1-1',
 		components: {Quotes, TestGroup},
-		info: {
-			world: 1,
-			level: 1,
-			title: 'Molhando os pés'
+		info,
+		metaInfo (){
+			return {
+				title: `${info.world}-${info.level} ${info.title}`
+			}
 		},
 		data: () => ({
 			tests
