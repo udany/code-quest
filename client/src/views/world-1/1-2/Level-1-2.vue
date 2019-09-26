@@ -16,13 +16,15 @@
             </p>
             <p>
                 Abra o arquivo <code>solutions/world-1/1-2/index.js</code> e preencha as funções que nem no nível anterior.
-                Ah, e caso você esteja se perguntando como obter o valor de pi... <a href="http://bfy.tw/F03W" target="_blank">
-                Fica a dica!
-            </a>
+                Ah, e caso você esteja se perguntando como obter o valor de pi...
+
+				<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">
+                	Fica a dica!
+            	</a>
             </p>
         </div>
 
-        <test-group v-for="test in tests" :key="tests.name" :test="test"></test-group>
+        <test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
     </div>
 </template>
 

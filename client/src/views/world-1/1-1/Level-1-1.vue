@@ -17,7 +17,7 @@
 			</p>
 		</div>
 
-		<test-group v-for="test in tests" :key="tests.name" :test="test"></test-group>
+		<test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
 	</div>
 </template>
 
