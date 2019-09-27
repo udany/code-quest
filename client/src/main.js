@@ -12,6 +12,9 @@ import store from './store'
 
 Vue.config.productionTip = false;
 
+import VueHighlightJS from 'vue-highlightjs'
+Vue.use(VueHighlightJS);
+
 export const app = new Vue({
 	router,
 	store,

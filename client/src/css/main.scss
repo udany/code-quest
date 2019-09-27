@@ -34,6 +34,10 @@ a {
 }
 
 p {
+	p + p {
+		margin-top: .8em;
+	}
+
 	a {
 		color: $highlight;
 		font-weight: bold;
@@ -49,8 +53,16 @@ img {max-width: 100%;}
 h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	font-family: $font-title;
-	font-weight: 300;
+	font-weight: 400;
 	text-shadow: 0 0 15px rgba(50, 50, 50, 1);
+
+	p + & {
+		margin-top: .8em;
+	}
+	& + & {
+		margin-top: .5em;
+	}
+	margin-bottom: .3em;
 
 	.rb-icon {
 		transform: scale(.8);
@@ -138,6 +150,20 @@ code {
 	background: rgba(black, .1);
 }
 
+pre {
+	padding: .5em .8em;
+	border-radius: .3em;
+	background: rgba(black, .2);
+	color: inherit;
+	font-size: inherit;
+
+	code {
+		padding: 0;
+		border-radius: 0;
+		background: none;
+	}
+}
+
 input, textarea {
 	color: #efefef;
 	background: rgba(0,0,0,.5);
@@ -167,3 +193,4 @@ input:focus, textarea:focus, button:focus, button:active:focus{
 }
 
 @import "./transitions";
+@import "./hljs";

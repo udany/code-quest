@@ -12,7 +12,7 @@ export default new Router({
 		{
 			path: '/',
 			name: 'home',
-			redirect: 'level-1-0'
+			redirect: 'level-0-0'
 		},
 		...levelRoutes
 	]
