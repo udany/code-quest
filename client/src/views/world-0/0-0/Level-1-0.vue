@@ -15,7 +15,7 @@
 		</p>
 
 		<p>
-			<small style="color: #aaa">E claro, podem chamar pra pedir ajuda também, sz</small>
+			<small class="text-grey">E claro, podem chamar pra pedir ajuda também, sz</small>
 		</p>
 
 		<p class="text-right">

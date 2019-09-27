@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Lv 1-2 - Andando pro fundo</h3>
+        <h3>1-2 - Andando pro fundo</h3>
 
 		<Quotes author="Lemony Snicket" book="The Austere Academy">
 			Ler é uma forma de escape, correr pela sua vida é outra.

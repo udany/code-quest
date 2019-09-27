@@ -5,7 +5,7 @@ export const tests = [
 	new TestGroup({
 		name: 'Soma',
 		signature: 'sum(a, b)',
-		description: 'Escreva uma função que receba dois números, a e b, e retorne a soma deles.',
+		description: `Receba dois números e retorne a soma deles.`,
 		fn: sum
 	})
 	.addCase(
@@ -32,7 +32,7 @@ export const tests = [
 	new TestGroup({
 		name: 'Subtração',
 		signature: 'subtract(a, b)',
-		description: 'Escreva uma função que receba dois números, a e b, e retorne a subtração deles.',
+		description: 'Receba dois números e retorne a subtração deles.',
 		fn: subtract
 	})
 	.addCase(
@@ -59,7 +59,7 @@ export const tests = [
 	new TestGroup({
 		name: 'Multiplicação',
 		signature: 'multiply(a, b)',
-		description: 'Escreva uma função que receba dois números, a e b, e retorne a multiplicação deles.',
+		description: 'Receba dois números e retorne a multiplicação deles.',
 		fn: multiply
 	})
 		.addCase(
@@ -86,7 +86,7 @@ export const tests = [
 	new TestGroup({
 		name: 'Divisão',
 		signature: 'divide(a, b)',
-		description: 'Escreva uma função que receba dois números, a e b, e retorne a divisão deles.',
+		description: 'Receba dois números e retorne a divisão deles.',
 		fn: divide
 	})
 		.addCase(

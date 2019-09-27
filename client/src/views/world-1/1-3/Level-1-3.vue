@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Lv 1-3 - Começando a nadar</h3>
+        <h3>1-3 - Começando a nadar</h3>
 
         <div class="col-sm-12">
             <Quotes author="Lemony Snicket" book="The Vile Village">

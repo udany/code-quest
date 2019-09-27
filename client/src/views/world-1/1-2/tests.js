@@ -5,7 +5,7 @@ export const tests = [
     new TestGroup({
         name: 'Divisor',
         signature: 'divisor(a, b)',
-        description: 'Escreva uma função que receba dois números, a e b, e cheque se b é divisor de a.',
+        description: 'Receba dois números e diga se `b` é divisor de `a` (ou seja, se o resto da divisão de `a` por `b` é igual a 0).',
         fn: divisor
     })
         .addCase(
@@ -29,10 +29,11 @@ export const tests = [
             outputs: false
         })
     ),
+
     new TestGroup({
         name: 'Ímpar',
         signature: 'isOdd(a)',
-        description: 'Escreva uma função que receba um número a e cheque se ele é primo.',
+        description: 'Receba um número e retorne `true` se ele é ímpar ou `false` se não.',
         fn: isOdd
     })
         .addCase(
@@ -51,11 +52,11 @@ export const tests = [
             outputs: true
         })
     ),
+
     new TestGroup({
         name: 'Área do retângulo',
         signature: 'areaOfRectangle(w, h)',
-        description: 'Escreva uma função que receba dois números, w e h, que representam, respectivamente, a' +
-            'largura e altura de um retângulo, e retorne a área desse retângulo.',
+        description: 'Receba dois números, `w` e `h`, respectivamente a largura e altura, e retorne a área desse retângulo.',
         fn: areaOfRectangle
     })
         .addCase(
@@ -74,10 +75,11 @@ export const tests = [
             outputs: 7.5
         })
     ),
+
     new TestGroup({
         name: 'Área do círculo',
         signature: 'areaOfCircle(r)',
-        description: 'Escreva uma função que receba um número r, e retorne a área de um círculo com raio r.',
+        description: 'Receba um número `r`, e retorne a área de um círculo com raio `r`.',
         fn: areaOfCircle
     })
         .addCase(
@@ -91,10 +93,11 @@ export const tests = [
             outputs: 1963.4954084936207
         })
     ),
+
     new TestGroup({
         name: 'Primo',
         signature: 'isPrime(a)',
-        description: 'Escreva uma função que receba um número a e cheque se ele é primo.',
+        description: 'Receba um número e retorne `true` se ele é primo ou `false` se não.',
         fn: isPrime
     })
         .addCase(

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h3>Lv 1-1 - Molhando os pés</h3>
+		<h3>1-1 - Molhando os pés</h3>
 
 		<Quotes author="Lemony Snicket" book="The Penultimate Peril">
 			Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade.

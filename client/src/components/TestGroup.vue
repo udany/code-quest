@@ -15,9 +15,9 @@
 			<code v-if="test.signature">{{test.signature}}</code>
 		</h3>
 
-		<cq-collapse :collapsed="collapsed">
-			<div v-if="test.description" v-html="test.description"></div>
+		<CqMarkdown v-if="test.description" :value="test.description"></CqMarkdown>
 
+		<cq-collapse :collapsed="collapsed">
 			<div v-for="(testCase, idx) in test.cases" :key="idx" class="cq-test-case">
 				<h5
 					class="text-default"
@@ -46,10 +46,11 @@
 	import {TestGroup} from '../../../shared/tests';
 	import CqCollapse from './CqCollapse';
 	import FaIcon from './FaIcon';
+	import CqMarkdown from './CqMarkdown';
 
 	export default {
 		name: 'TestGroup',
-		components: {FaIcon, CqCollapse},
+		components: {CqMarkdown, FaIcon, CqCollapse},
 		data: () => ({
 			collapsed: true
 		}),
