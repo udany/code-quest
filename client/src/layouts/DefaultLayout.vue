@@ -15,19 +15,23 @@
 		<b-container>
 			<b-row class="cq-body">
 				<b-col class="cq-menu" cols="2">
-					<h3>Fases</h3>
-
-					<router-link
-						v-for="levelRoute in levelRoutes"
-						:key="levelRoute.name"
-						:to="levelRoute.name"
+					<section
+						v-for="world in worlds"
+						:key="world.name"
 					>
-						<b>
-							{{levelRoute.info.world}}-{{levelRoute.info.level}}
-						</b>
-						{{levelRoute.info.title}}
-					</router-link>
+						<h3>{{world.number}}. {{world.name}}</h3>
 
+						<router-link
+							v-for="level in world.levels"
+							:key="level.name"
+							:to="level.name"
+						>
+							<b>
+								{{level.info.world}}-{{level.info.level}}
+							</b>
+							{{level.info.title}}
+						</router-link>
+					</section>
 					...
 				</b-col>
 				<b-col class="cq-page-body">
@@ -39,12 +43,12 @@
 </template>
 
 <script>
-	import levelRoutes from '../views/routes';
+	import { worlds } from '../views/routes/';
 
 	export default {
 		name: 'DefaultLayout',
 		data: () => ({
-			levelRoutes: levelRoutes.map(x => x.component)
+			worlds
 		})
 	}
 </script>

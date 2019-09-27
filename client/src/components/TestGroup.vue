@@ -16,7 +16,8 @@
 		</h3>
 
 		<cq-collapse :collapsed="collapsed">
-			<p v-if="test.description">{{test.description}}</p>
+			<div v-if="test.description" v-html="test.description"></div>
+
 			<div v-for="(testCase, idx) in test.cases" :key="idx" class="cq-test-case">
 				<h5
 					class="text-default"

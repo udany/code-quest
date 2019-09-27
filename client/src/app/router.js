@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
-import levelRoutes from '../views/routes';
+import levelRoutes from '../views/routes/';
 
 Vue.use(Router);
 Vue.use(Meta);

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Lv 1-4 - Tente não engolir água!</h3>
+        <h3>Lv 1-4 - Sem engolir água!</h3>
 
         <div class="col-sm-12">
             <Quotes
@@ -52,7 +52,7 @@
     const info = {
         world: 1,
         level: 4,
-        title: 'Tente não engolir água!'
+        title: 'Sem engolir água!'
     };
 
     export default {
