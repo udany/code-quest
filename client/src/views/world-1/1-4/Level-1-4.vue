@@ -3,12 +3,10 @@
         <h3>Lv 1-4 - Sem engolir água!</h3>
 
         <div class="col-sm-12">
-            <Quotes
-                    quote-text="Só porque algo é tradicional não significa que há razão para fazê-lo, claro.
-                    A pirataria, por exemplo, é uma tradição que foi perpetuada por centenas de anos,
-                    mas não significa que devemos todos atacar navios e roubar seu ouro."
-                    author="Lemony Snicket"
-                    book="Horseradish">
+            <Quotes author="Lemony Snicket" book="Horseradish">
+				Só porque algo é tradicional não significa que há razão para fazê-lo, claro.
+				A pirataria, por exemplo, é uma tradição que foi perpetuada por centenas de anos,
+				mas não significa que devemos todos atacar navios e roubar seu ouro.
             </Quotes>
         </div>
 

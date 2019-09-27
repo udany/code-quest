@@ -3,11 +3,9 @@
         <h3>Lv 1-3 - Começando a nadar</h3>
 
         <div class="col-sm-12">
-            <Quotes
-                    quote-text="Não importa quem você é, onde você mora, ou quantas pessoas estão te perseguindo,
-                    o que você não lê é frequentemente tão importante quanto o que você lê."
-                    author="Lemony Snicket"
-                    book="The Vile Village">
+            <Quotes author="Lemony Snicket" book="The Vile Village">
+				Não importa quem você é, onde você mora, ou quantas pessoas estão te perseguindo,
+				o que você não lê é frequentemente tão importante quanto o que você lê.
             </Quotes>
         </div>
 
