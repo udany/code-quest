@@ -12,8 +12,8 @@
 			No javascript, para declarar uma variável você usa a palavra chave <cq-code inline>let</cq-code>:
 		</p>
 
-<cq-code>let idade = 18;
-let nome = 'Anakin';
+<cq-code>let age = 18;
+let name = 'Anakin';
 let group = 'Jedi'; // TODO: Trocar depois do filme 3</cq-code>
 
 		<p>
