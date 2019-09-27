@@ -27,7 +27,20 @@ export class TestCase {
 	 * @returns {Boolean}
 	 */
 	run(fn) {
-		let result = fn(...this.inputs);
+		let result;
+
+		try {
+			result = fn(...this.inputs);
+		} catch (e) {
+			debugger;
+			result = e;
+		}
+
+		return result;
+	}
+
+	test(fn) {
+		let result = this.run(fn);
 
 		if (this.outputs instanceof Function) {
 			return this.outputs(result);
@@ -75,25 +88,40 @@ export class TestGroup {
 		return this;
 	}
 
+
+	/**
+	 *
+	 * @param {TestCase} testCase
+	 * @returns {Boolean}
+	 */
+	run(testCase) {
+		return testCase.run(this.fn);
+	}
+
 	/**
 	 *
 	 * @param {TestCase} [testCase]
 	 * @returns {Boolean}
 	 */
-	run(testCase) {
-		if (testCase) {
-			return testCase.run(this.fn);
-		} else {
-			let state = true;
+	test(testCase) {
+		try {
+			if (testCase) {
+				return testCase.test(this.fn);
+			} else {
+				let state = true;
 
-			for (const tc of this.cases) {
-				if (!tc.run(this.fn)) {
-					state = false;
-					break;
+				for (const tc of this.cases) {
+					if (!tc.test(this.fn)) {
+						state = false;
+						break;
+					}
 				}
-			}
 
-			return state;
+				return state;
+			}
+		} catch (e) {
+
+			debugger;
 		}
 	}
 }

@@ -21,9 +21,9 @@
 			<div v-for="(testCase, idx) in test.cases" :key="idx" class="cq-test-case">
 				<h5
 					class="text-default"
-					:class="test.run(testCase) ? 'text-success' : 'text-danger'"
+					:class="test.test(testCase) ? 'text-success' : 'text-danger'"
 				>
-					<fa-icon>{{test.run(testCase) ? 'check' : 'times'}}</fa-icon>
+					<fa-icon>{{test.test(testCase) ? 'check' : 'times'}}</fa-icon>
 					Caso {{idx}}
 				</h5>
 
@@ -33,7 +33,7 @@
 
 				<b>Saída: </b> <code>{{caseOutput(testCase)}}</code>
 
-				<template v-if="!test.run(testCase)">
+				<template v-if="!test.test(testCase)">
 					<br>
 					<b>Saída esperada: </b> <code>{{testCase.outputs.toString()}}</code>
 				</template>
@@ -62,12 +62,12 @@
 		},
 		computed: {
 			passing() {
-				return this.test.run();
+				return this.test.test();
 			}
 		},
 		methods: {
 			caseOutput(testCase) {
-				const r = this.test.fn(...testCase.inputs);
+				const r = this.test.run(testCase);
 
 				if (r === undefined) {
 					return 'undefined';
