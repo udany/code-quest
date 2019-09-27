@@ -1,11 +1,15 @@
-export function hasAtSign(str){
+export function pow(a, b){
 
 }
 
-export function isValidEmail(str){
+export function factorial(a){
 
 }
 
-export function palindrome(str){
+export function triangleCheck(x, y, z){
+
+}
+
+export function squareRoot(a){
 
 }

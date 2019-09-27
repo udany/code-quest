@@ -13,30 +13,9 @@
 
         <div class="col-sm">
             <p>
-                Certo, parece que temos um profissional aqui! Vamos ver como você se sai agora...
+                Continuando nessa linha de funções matemáticas, implemente as seguintes funções no seu
+                arquivo <code>solutions/world-1/1-3/index.js</code>.
             </p>
-            <p>
-                Já sabe como é, abre logo o <code>solutions/world-1/1-3/index.js</code> =D
-            </p>
-            <p>Alguns links úteis:</p>
-
-            <ul>
-                <li>
-                    <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf">indexOf</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/length">length</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split">split</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">reverse</a>
-                </li>
-                <li>
-                    <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join</a>
-                </li>
-            </ul>
         </div>
 
         <test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
