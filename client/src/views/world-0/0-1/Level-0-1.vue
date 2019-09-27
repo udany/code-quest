@@ -27,13 +27,13 @@
 
 <script>
 	const info = {
-		world: 1,
-		level: 0,
-		title: 'Introdução'
+		world: 0,
+		level: 1,
+		title: 'Os básicos'
 	};
 
 	export default {
-		name: 'Level-1-0',
+		name: 'Level-0-1',
 		info,
 		metaInfo (){
 			return {

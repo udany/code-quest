@@ -6,7 +6,7 @@ const levelsContext = require.context('./', true, /Level-.*\.vue$/);
 const levels = importContext(levelsContext);
 
 export default new CqWorld({
-	name: 'Hello World',
-	number: 1,
+	name: 'Bem Vindo',
+	number: 0,
 	levels
 });

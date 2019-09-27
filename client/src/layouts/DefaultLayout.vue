@@ -18,8 +18,9 @@
 					<section
 						v-for="world in worlds"
 						:key="world.name"
+						class="mb-5"
 					>
-						<h3>{{world.number}}. {{world.name}}</h3>
+						<h3 class="mb-3">{{world.number}}. {{world.name}}</h3>
 
 						<router-link
 							v-for="level in world.levels"
