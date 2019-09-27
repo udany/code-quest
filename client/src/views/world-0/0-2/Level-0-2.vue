@@ -33,11 +33,11 @@
 		</p>
 
 		<cq-code>
-			let x = 5;
-			if (x > 5){
-				console.log('X é maior que 5.');
-			}
-			//O console.log() não é executado.
+let x = 5;
+if (x > 5) {
+	console.log('X é maior que 5.');
+}
+//O console.log() não é executado.
 		</cq-code>
 
 		<p>
@@ -46,13 +46,13 @@
 		</p>
 
 		<cq-code>
-			let x = 5;
-			if (x > 5){
-				console.log('X é maior que 5.');
-			}else{
-				console.log('X é menor ou igual a 5.');
-			}
-			//O console.log() executado é o segundo.
+let x = 5;
+if (x > 5) {
+	console.log('X é maior que 5.');
+} else {
+	console.log('X é menor ou igual a 5.');
+	//O console.log() executado é este
+}
 		</cq-code>
 
 		<p>
@@ -61,16 +61,21 @@
 		</p>
 
 		<cq-code>
-			let x = 5;
-			if (x > 5){
-				console.log('X é maior que 5.');
-			}else if (x < 5){
-				console.log('X é menor que 5.');
-			}else{
-				console.log('X é igual a 5.');
-			}
-			//O console.log() executado é o terceiro.
+let x = 5;
+if (x > 5){
+	console.log('X é maior que 5.');
+}else if (x < 5){
+	console.log('X é menor que 5.');
+}else{
+	console.log('X é igual a 5.');
+	//O console.log() executado agora é esse
+}
 		</cq-code>
+
+		<p>
+			Agora, caso você tenha que fazer uma sequência de <code>if / else</code> muito longa, talvez o que você
+			precise na verdade seja...
+		</p>
 
 		<h3>
 			O switch statement
@@ -82,19 +87,19 @@
 		</p>
 
 		<cq-code>
-			let x = 5;
-			switch (x){
-				case 1:
-					console.log('X igual a 1');
-					break;
-				case 2:
-					console.log('X igual a 2');
-					break;
-				case 5:
-					console.log('X igual a 5');
-					break;
-			}
-			//O console.log() executado é o último
+let x = 5;
+switch (x){
+	case 1:
+		console.log('X igual a 1');
+		break;
+	case 2:
+		console.log('X igual a 2');
+		break;
+	case 5:
+		console.log('X igual a 5');
+		break;
+}
+//O console.log() executado é o último
 		</cq-code>
 
 		<p>
@@ -114,21 +119,21 @@
 		</p>
 
 		<cq-code>
-			let x = 10;
-			switch (x){
-				case 1:
-					console.log('X igual a 1');
-					break;
-				case 2:
-					console.log('X igual a 2');
-					break;
-				case 5:
-					console.log('X igual a 5');
-					break;
-				default:
-					console.log('X não encontrado');
-			}
-			//O console.log() executado é o último
+let x = 10;
+switch (x){
+	case 1:
+		console.log('X igual a 1');
+		break;
+	case 2:
+		console.log('X igual a 2');
+		break;
+	case 5:
+		console.log('X igual a 5');
+		break;
+	default:
+		console.log('X não encontrado');
+}
+//O console.log() executado é o último
 		</cq-code>
 	</div>
 </template>

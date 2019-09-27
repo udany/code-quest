@@ -30,48 +30,51 @@
         </h3>
 
         <cq-code>
-            for (int i = 0; i < 10; i++){
-                console.log(i);
-            }
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
         </cq-code>
 
         <p>
             No <code>for loop</code>, primeiro você diz qual a variável que será usada como contador, depois você informa
-            a condição de saída do loop, e por fim você especifica o iterador, que irá alterar o valor do contador.<br>
+            a condição de saída do loop, e por fim você especifica o iterador, que irá alterar o valor do contador.
+        </p>
+
+        <p>
             No exemplo acima, o contador é a variável <code>i</code>, a condição de saída é <code>i < 10</code>, o que
             significa que enquanto o valor de <code>i</code> for menor que 10, o loop continuará sendo executado, e o
             iterador é <code>i++</code>, indicando que ao final de cada <b>iteração</b> do loop, o valor de <code>i</code>
-             deve ser incrementado em 1.
+            deve ser incrementado em 1.
         </p>
 
         <p>
             <b>Dica 1:</b> No exemplo acima, a variável utilizada como contador foi declarada na própria estrutura do loop,
-            porém isso não é regra: você pode declarar uma variável anteriormente e utilizá-la como contador.
+            porém isso, apesar de bastante comum, não é regra: você pode usar uma variável declarada anteriormente.
         </p>
+
+        <cq-code>
+let i = 0;
+for (i; i < 10; i = i + 2) {
+    console.log(i);
+}
+        </cq-code>
 
         <p>
             <b>Dica 2:</b> <code>i++</code> é apenas uma forma diferente de escrever <code>i = i + 1</code>, assim como
             <code>i--</code> é outra forma de escrever <code>i = i - 1</code>. O iterador pode ser escrito da sua
-            maneira desejada, contando que altere o valor do contador corretamente.
+            maneira desejada, contanto que altere o valor do contador corretamente.
         </p>
-
-        <cq-code>
-            let i = 0;
-            for (i; i < 10; i = i + 2){
-                console.log(i);
-            }
-        </cq-code>
 
         <h3>
             While loop
         </h3>
 
         <cq-code>
-            let i = 0;
-            while (i < 10){
-                console.log(i);
-                i++;
-            }
+let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
         </cq-code>
 
         <p>
@@ -86,11 +89,11 @@
         </p>
 
         <cq-code>
-            let i = 0;
-            do{
-                console.log(i);
-                i++;
-            }while (i < 10);
+let i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i < 10);
         </cq-code>
 
         <p>
@@ -99,13 +102,13 @@
         </p>
 
         <cq-code>
-            let i = 10;               ||    let i = 10;
-            while(i < 10){            ||    do{
-                console.log(i);       ||        console.log(i);
-                i++;                  ||        i++;
-            }                         ||    }while(i < 10);
-            //O console.log não       ||    //O console.log será
-            //será executado          ||    //executado 1 vez.
+let i = 10;               ||    let i = 10;
+while (i < 10) {          ||    do {
+    console.log(i);       ||        console.log(i);
+    i++;                  ||        i++;
+}                         ||    } while(i < 10);
+// O console.log não      ||    // O console.log será
+// será executado         ||    // executado 1 vez.
         </cq-code>
     </div>
 </template>
