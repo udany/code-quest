@@ -15,5 +15,5 @@ export function areaOfCircle(r){
 }
 
 export function isPrime(a){
-	aslkjsals(a);
+
 }
