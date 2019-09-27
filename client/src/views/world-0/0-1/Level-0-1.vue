@@ -39,7 +39,7 @@ let group = 'Jedi'; // TODO: Trocar depois do filme 3</cq-code>
 				<b>Number</b> - Um número, seja inteiro ou racional
 			</li>
 			<li>
-				<b>String</b> - Uma sequência de caracteres
+				<b>String</b> - Uma sequência de caracteres, podem ser definidas como <code>"string"</code> ou <code>'string'</code>
 			</li>
 			<li>
 				<b>Null</b> - Usado pra representar a ausência de um valor

@@ -12,6 +12,11 @@ import store from './store'
 
 Vue.config.productionTip = false;
 
+import hljs from 'highlight.js';
+hljs.configure({
+	tabReplace: '    '
+});
+
 import VueHighlightJS from 'vue-highlightjs'
 Vue.use(VueHighlightJS);
 
