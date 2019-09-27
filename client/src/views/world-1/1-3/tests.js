@@ -5,6 +5,7 @@ export const tests = [
     new TestGroup({
         name: 'Possui um arroba',
         signature: 'hasAtSign(str)',
+        description: 'Escreva uma função que receba uma string e cheque se a mesma contém o caractere "@".',
         fn: hasAtSign
     })
         .addCase(
@@ -31,6 +32,8 @@ export const tests = [
     new TestGroup({
         name: 'Email válido',
         signature: 'isValidEmail(str)',
+        description: 'Escreva uma função que receba uma string e cheque se a mesma é um Email válido. ' +
+            'Exemplo de Email válido: texto@texto.texto',
         fn: isValidEmail
     })
         .addCase(
@@ -67,6 +70,9 @@ export const tests = [
     new TestGroup({
         name: 'Palíndromo',
         signature: 'palindrome(str)',
+        description: 'Escreva uma função que receba uma string e cheque se ela é um palíndromo ' +
+            '(um palíndromo é uma palavra, frase ou qualquer outra sequência de caracteres que possa ser lida ' +
+            'tanto da direita para a esquerda como da esquerda para a direita).',
         fn: palindrome
     })
         .addCase(

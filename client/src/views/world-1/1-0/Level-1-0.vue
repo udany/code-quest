@@ -10,7 +10,7 @@
 		</p>
 
 		<p>
-			Cada desafio conterá uma breve descrição do que é esperado e quando necessário alguns links de
+			Cada desafio conterá uma breve descrição do que é esperado e, quando necessário, alguns links de
 			referência para ajudar você. Quando em dúvida, lembre-se: <mark>O Google é seu amigo!</mark>
 		</p>
 

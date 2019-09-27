@@ -5,6 +5,7 @@ export const tests = [
     new TestGroup({
         name: 'Divisor',
         signature: 'divisor(a, b)',
+        description: 'Escreva uma função que receba dois números, a e b, e cheque se b é divisor de a.',
         fn: divisor
     })
         .addCase(
@@ -30,7 +31,8 @@ export const tests = [
     ),
     new TestGroup({
         name: 'Ímpar',
-        signature: 'isOdd(a, b)',
+        signature: 'isOdd(a)',
+        description: 'Escreva uma função que receba um número a e cheque se ele é primo.',
         fn: isOdd
     })
         .addCase(
@@ -51,7 +53,9 @@ export const tests = [
     ),
     new TestGroup({
         name: 'Área do retângulo',
-        signature: 'areaOfRectangle(a, b)',
+        signature: 'areaOfRectangle(w, h)',
+        description: 'Escreva uma função que receba dois números, w e h, que representam, respectivamente, a' +
+            'largura e altura de um retângulo, e retorne a área desse retângulo.',
         fn: areaOfRectangle
     })
         .addCase(
@@ -72,7 +76,8 @@ export const tests = [
     ),
     new TestGroup({
         name: 'Área do círculo',
-        signature: 'areaOfCircle(a, b)',
+        signature: 'areaOfCircle(r)',
+        description: 'Escreva uma função que receba um número r, e retorne a área de um círculo com raio r.',
         fn: areaOfCircle
     })
         .addCase(
@@ -88,7 +93,8 @@ export const tests = [
     ),
     new TestGroup({
         name: 'Primo',
-        signature: 'isPrime(a, b)',
+        signature: 'isPrime(a)',
+        description: 'Escreva uma função que receba um número a e cheque se ele é primo.',
         fn: isPrime
     })
         .addCase(
