@@ -1,3 +1,13 @@
 # Code Quest
 
-Plataforma de aprendizado de programação
+O **Code Quest** é uma plataforma de aprendizado de programação que propõe
+diversos desafios incrementais te levando por uma jornada na qual você irá
+aprender Javascript!
+
+Para rodar o projeto é necessário antes instalar o [Node.js](https://nodejs.org/en/)
+antes caso já não esteja instalado (na dúvida, escolham a versão LTS),
+depois siga as instruções abaixo:
+
+- Na **primeira vez** que você for rodar, abra o arquivo `setup.bat` que está
+na pasta inicial, isso instalará todas as dependência necessárias pra rodar.
+- Posteriormente você pode rodar o arquivo `start.bat` pra iniciar o projeto.
