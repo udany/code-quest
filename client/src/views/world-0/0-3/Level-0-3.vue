@@ -5,110 +5,135 @@
         </h2>
 
         <p>
-            Em programação, um loop é uma estrutura que permite realizar o mesmo conjunto de operações repetidas
-            vezes - o que é chamado de <b>iteração</b> na linguagem de programação.<br>
-            Um loop geralmente é composto por 3 itens:
+            Estruturas condicionais em Javascript são utilizadas para verificar uma condição e definir se algo deve
+            ou não acontecer.<br>
+            Um bom exemplo disso, e que não tem nada a ver com programação, é a linguagem que utilizamos para nos
+            comunicar:
+            <br>
+            <br>
+            <i>Se cancelarem a aula de hoje, vou para a mureta.</i>
+            <br>
+            <br>
+            Temos uma condição (se cancelarem a aula de hoje) para executar uma ação (vou para a mureta) dependendo do
+            resultado dessa condição. Se verdadeira, a ação é executada.
         </p>
-        <ul>
-            <li>
-                Um <b>contador</b>, que é inicializado com um valor, determinando o ponto de início do loop;
-            </li>
-            <li>
-                Uma <b>condição de saída</b>, que é o critério no qual o loop para (geralmente o contador atinge
-                um certo valor);
-            </li>
-            <li>
-                Um <b>iterador</b>, responsável por alterar o valor do contador após cada execução do loop.
-            </li>
-        </ul>
+
         <p>
-            Em Javascript, existem 2 principais estruturas que funcionam como loops: o <code>for</code> e o <code>while</code>.
+            Em Javascript, podemos utilizar de duas estruturas diferentes de condicionais: o <code>if</code> e
+            o <code>switch</code>.
         </p>
 
         <h3>
-            For loop
+            O if statement
         </h3>
 
-        <cq-code>
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
-        </cq-code>
-
         <p>
-            No <code>for loop</code>, primeiro você diz qual a variável que será usada como contador, depois você informa
-            a condição de saída do loop, e por fim você especifica o iterador, que irá alterar o valor do contador.
-        </p>
-
-        <p>
-            No exemplo acima, o contador é a variável <code>i</code>, a condição de saída é <code>i < 10</code>, o que
-            significa que enquanto o valor de <code>i</code> for menor que 10, o loop continuará sendo executado, e o
-            iterador é <code>i++</code>, indicando que ao final de cada <b>iteração</b> do loop, o valor de <code>i</code>
-            deve ser incrementado em 1.
-        </p>
-
-        <p>
-            <b>Dica 1:</b> No exemplo acima, a variável utilizada como contador foi declarada na própria estrutura do loop,
-            porém isso, apesar de bastante comum, não é regra: você pode usar uma variável declarada anteriormente.
+            O <code>if</code> é a principal e mais simples estrutura de condicional no Javascript. Ela testa se uma
+            dada condição é verdadeira, executando um bloco de código caso seja.
         </p>
 
         <cq-code>
-let i = 0;
-for (i; i < 10; i = i + 2) {
-    console.log(i);
-}
+            let x = 5;
+            if (x > 5) {
+            console.log('X é maior que 5.');
+            }
+            //O console.log() não é executado.
         </cq-code>
 
         <p>
-            <b>Dica 2:</b> <code>i++</code> é apenas uma forma diferente de escrever <code>i = i + 1</code>, assim como
-            <code>i--</code> é outra forma de escrever <code>i = i - 1</code>. O iterador pode ser escrito da sua
-            maneira desejada, contanto que altere o valor do contador corretamente.
+            Além disso, o <code>if</code> pode conter também a expressão <code>else</code>, que determina um bloco de
+            código para ser executado caso a condição seja falsa.
+        </p>
+
+        <cq-code>
+            let x = 5;
+            if (x > 5) {
+            console.log('X é maior que 5.');
+            } else {
+            console.log('X é menor ou igual a 5.');
+            //O console.log() executado é este
+            }
+        </cq-code>
+
+        <p>
+            Indo mais além ainda, a expressão <code>else</code> permite que você encadeie outro <code>if</code>,
+            para que você cheque múltiplas condições, uma após a outra.
+        </p>
+
+        <cq-code>
+            let x = 5;
+            if (x > 5){
+            console.log('X é maior que 5.');
+            }else if (x < 5){
+            console.log('X é menor que 5.');
+            }else{
+            console.log('X é igual a 5.');
+            //O console.log() executado agora é esse
+            }
+        </cq-code>
+
+        <p>
+            Agora, caso você tenha que fazer uma sequência de <code>if / else</code> muito longa, talvez o que você
+            precise na verdade seja...
         </p>
 
         <h3>
-            While loop
+            O switch statement
         </h3>
 
+        <p>
+            O <code>switch</code> também permite que você cheque se certas condições são válidas e execute códigos
+            diferentes para elas:
+        </p>
+
         <cq-code>
-let i = 0;
-while (i < 10) {
-    console.log(i);
-    i++;
-}
+            let x = 5;
+            switch (x){
+            case 1:
+            console.log('X igual a 1');
+            break;
+            case 2:
+            console.log('X igual a 2');
+            break;
+            case 5:
+            console.log('X igual a 5');
+            break;
+            }
+            //O console.log() executado é o último
         </cq-code>
 
         <p>
-            No <code>while loop</code>, você começa especificando a condição de saída, e o iterador é definido dentro do
-            próprio loop, nesse caso o iterador é o <code>i++</code>. Além disso, diferentemente do <code>for loop</code>
-            , a variável utilizada como contador deve ser declarada antes do loop.
+            A estrutura <code>switch</code> vai checar se a variável escolhida <code>x</code> assume um dos valores que
+            aparecem após as palavras <code>case</code>, e executar os comandos específicos do <code>case</code> correto.
         </p>
 
         <p>
-            O <code>while loop</code> possui uma variação, o <code>do...while loop</code>, que, resumidamente, coloca
-            o código a ser executado pelo loop antes da condição de saída.
+            <b>Dica:</b> A palavra <code>break</code> é utilizada para dizer ao programa que não precisa continuar
+            comparando a variável com os outros casos, pois o caso correto já foi identificado, assim saindo do loop.
         </p>
-
-        <cq-code>
-let i = 0;
-do {
-    console.log(i);
-    i++;
-} while (i < 10);
-        </cq-code>
 
         <p>
-            Essa alteração faz com que o loop sempre seja executado uma primeira vez, antes de checar se o contador
-            obedece a condição de saída.
+            <b>Dica:</b> O <code>switch</code> aceita um tipo de <code>case</code> específico chamado <code>default</code>,
+            que é utilizado como o <code>else</code> do <code>if</code>, ou seja, é o código que será executado caso
+            nenhuma das outras condições sejam válidas.
         </p>
 
         <cq-code>
-let i = 10;               ||    let i = 10;
-while (i < 10) {          ||    do {
-    console.log(i);       ||        console.log(i);
-    i++;                  ||        i++;
-}                         ||    } while(i < 10);
-// O console.log não      ||    // O console.log será
-// será executado         ||    // executado 1 vez.
+            let x = 10;
+            switch (x){
+            case 1:
+            console.log('X igual a 1');
+            break;
+            case 2:
+            console.log('X igual a 2');
+            break;
+            case 5:
+            console.log('X igual a 5');
+            break;
+            default:
+            console.log('X não encontrado');
+            }
+            //O console.log() executado é o último
         </cq-code>
     </div>
 </template>
@@ -118,7 +143,7 @@ while (i < 10) {          ||    do {
     const info = {
         world: 0,
         level: 3,
-        title: 'Loops'
+        title: 'Condicionais'
     };
 
     export default {
