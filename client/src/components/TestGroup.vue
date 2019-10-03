@@ -28,14 +28,14 @@
 				</h5>
 
 				<template v-if="testCase.inputs && testCase.inputs.length">
-					<b>Entradas: </b> <code>{{testCase.inputs.toString()}}</code><br>
+					<b>Entradas: </b> <code>{{formatInputs(testCase.inputs)}}</code><br>
 				</template>
 
 				<b>Saída: </b> <code>{{caseOutput(testCase)}}</code>
 
 				<template v-if="!test.test(testCase)">
 					<br>
-					<b>Saída esperada: </b> <code>{{testCase.outputs.toString()}}</code>
+					<b>Saída esperada: </b> <code>{{JSON.stringify(testCase.outputs)}}</code>
 				</template>
 			</div>
 		</cq-collapse>
@@ -72,8 +72,21 @@
 				if (r === undefined) {
 					return 'undefined';
 				} else {
-					return r.toString();
+					return JSON.stringify(r);
 				}
+			},
+			formatInputs(input) {
+				let output = input.map(element => {
+					if (element.isArray){
+						let temp = element.join(', ');
+						return `[${temp}]`;
+					}
+					return element;
+				});
+				output = JSON.stringify(output);
+				output = output.slice(1);
+				output = output.slice(0, output.length - 1);
+				return output;
 			}
 		}
 	}
