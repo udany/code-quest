@@ -6,7 +6,7 @@ export function includes(arr, a){
 
 }
 
-export function sum(arr){
+export function arraySum(arr){
 
 }
 

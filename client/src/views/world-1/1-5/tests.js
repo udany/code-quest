@@ -1,5 +1,5 @@
 import {TestCase, TestGroup} from '../../../../../shared/tests';
-import {concat, highestNumber, includes, sum} from "../../../../../solutions/world-1/1-5";
+import {concat, highestNumber, includes, arraySum} from "../../../../../solutions/world-1/1-5";
 
 
 export const tests = [
@@ -55,9 +55,9 @@ export const tests = [
 
     new TestGroup({
         name: 'Soma',
-        signature: 'sum(arr)',
+        signature: 'arraySum(arr)',
         description: 'Escreva uma função que receba um array de números e retorne a soma dos mesmos.',
-        fn: sum
+        fn: arraySum
     })
         .addCase(
             new TestCase({
