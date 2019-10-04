@@ -15,7 +15,8 @@ import {
 	faFileDownload,
 	faRedoAlt,
 	faCheck,
-	faTimes
+	faTimes,
+	faBars
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -33,7 +34,8 @@ library.add(
 	faFileDownload,
 	faRedoAlt,
 	faCheck,
-	faTimes
+	faTimes,
+	faBars
 );
 
 import {

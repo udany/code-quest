@@ -39,7 +39,7 @@
     const info = {
         world: 1,
         level: 5,
-        title: 'Gasp! Glub glub glub...'
+        title: 'Gasp! Glub glub...'
     };
 
     export default {
