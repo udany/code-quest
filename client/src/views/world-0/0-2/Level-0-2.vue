@@ -5,136 +5,124 @@
 		</h2>
 
 		<p>
-			Estruturas condicionais em Javascript são utilizadas para verificar uma condição e definir se algo deve
-			ou não acontecer.<br>
-			Um bom exemplo disso, e que não tem nada a ver com programação, é a linguagem que utilizamos para nos
-			comunicar:
-			<br>
-			<br>
-			<i>Se cancelarem a aula de hoje, vou para a mureta.</i>
-			<br>
-			<br>
-			Temos uma condição (se cancelarem a aula de hoje) para executar uma ação (vou para a mureta) dependendo do
-			resultado dessa condição. Se verdadeira, a ação é executada.
+			O JavaScript possui tanto operadores binários quanto unários, além de um operador ternário,
+			o condicional. Um operador binário exige dois operandos, um antes do operador e outro depois.
+			 Já o operador unário exige um único operando, seja antes ou depois do operador.
 		</p>
 
-		<p>
-			Em Javascript, podemos utilizar de duas estruturas diferentes de condicionais: o <code>if</code> e
-			o <code>switch</code>.
-		</p>
+		<cq-code>
+			x+y; //Operador binário
+			x++; //Operador unário
+		</cq-code>
 
 		<h3>
-			O if statement
+			Operadores de atribuição
 		</h3>
 
 		<p>
-			O <code>if</code> é a principal e mais simples estrutura de condicional no Javascript. Ela testa se uma
-			dada condição é verdadeira, executando um bloco de código caso seja.
+			Um operador de atribuição atribui um valor ao operando à sua esquerda baseado no valor do operando à
+			direita. O operador de atribuição básico é o <code>=</code>, que atribui o valor do operando à direita ao
+			operando à esquerda.
 		</p>
 
 		<cq-code>
-let x = 5;
-if (x > 5) {
-	console.log('X é maior que 5.');
-}
-//O console.log() não é executado.
+			x = 10; //x recebe 10
+			x = y;  //x recebe o valor de y
 		</cq-code>
 
 		<p>
-			Além disso, o <code>if</code> pode conter também a expressão <code>else</code>, que determina um bloco de
-			código para ser executado caso a condição seja falsa.
+			Existem outros operadores de atribuição que servem como encurtamentos do operador padrão, os mais utilizados
+			sendo o de adição e de subtração:
 		</p>
 
 		<cq-code>
-let x = 5;
-if (x > 5) {
-	console.log('X é maior que 5.');
-} else {
-	console.log('X é menor ou igual a 5.');
-	//O console.log() executado é este
-}
+			x += y //Significa x = x + y
+			x -= y //Significa x = x - y
 		</cq-code>
-
-		<p>
-			Indo mais além ainda, a expressão <code>else</code> permite que você encadeie outro <code>if</code>,
-			para que você cheque múltiplas condições, uma após a outra.
-		</p>
-
-		<cq-code>
-let x = 5;
-if (x > 5){
-	console.log('X é maior que 5.');
-}else if (x < 5){
-	console.log('X é menor que 5.');
-}else{
-	console.log('X é igual a 5.');
-	//O console.log() executado agora é esse
-}
-		</cq-code>
-
-		<p>
-			Agora, caso você tenha que fazer uma sequência de <code>if / else</code> muito longa, talvez o que você
-			precise na verdade seja...
-		</p>
 
 		<h3>
-			O switch statement
+			Operadores de comparação
 		</h3>
 
 		<p>
-			O <code>switch</code> também permite que você cheque se certas condições são válidas e execute códigos
-			diferentes para elas:
+			Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a
+			comparação é verdadeira.
+		</p>
+
+		<p>
+			Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript
+			tenta convertê-los para um tipo apropriado. As únicas exceções a esta regra são os operadores
+			<code>===</code> e o <code>!==</code>, que realizam comparações de igualdade e desigualdade "estritas".
+			Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade.
 		</p>
 
 		<cq-code>
-let x = 5;
-switch (x){
-	case 1:
-		console.log('X igual a 1');
-		break;
-	case 2:
-		console.log('X igual a 2');
-		break;
-	case 5:
-		console.log('X igual a 5');
-		break;
-}
-//O console.log() executado é o último
+			let x = 10;	//X é do tipo inteiro
+			let y = '10';	//Y é do tipo string
+			x == y;		//Realiza conversão de tipos, retorna true
+			x === y;	//Não realiza conversão de tipos, retorna false
 		</cq-code>
 
 		<p>
-			A estrutura <code>switch</code> vai checar se a variável escolhida <code>x</code> assume um dos valores que
-			aparecem após as palavras <code>case</code>, e executar os comandos específicos do <code>case</code> correto.
-		</p>
-
-		<p>
-			<b>Dica:</b> A palavra <code>break</code> é utilizada para dizer ao programa que não precisa continuar
-			comparando a variável com os outros casos, pois o caso correto já foi identificado, assim saindo do loop.
-		</p>
-
-		<p>
-			<b>Dica:</b> O <code>switch</code> aceita um tipo de <code>case</code> específico chamado <code>default</code>,
-			 que é utilizado como o <code>else</code> do <code>if</code>, ou seja, é o código que será executado caso
-			nenhuma das outras condições sejam válidas.
+			Além dos operadores <code>==</code> e <code>===</code>, o Javascript também possui outros operadores de
+			 comparação:
 		</p>
 
 		<cq-code>
-let x = 10;
-switch (x){
-	case 1:
-		console.log('X igual a 1');
-		break;
-	case 2:
-		console.log('X igual a 2');
-		break;
-	case 5:
-		console.log('X igual a 5');
-		break;
-	default:
-		console.log('X não encontrado');
-}
-//O console.log() executado é o último
+			x > y 	//Maior que
+			x < y 	//Menor que
+			x >= y 	//Maior ou igual a
+			x <= y 	//Menor ou igual a
+			x != y 	//Diferente de
+			x !== y //Estritamente diferente de
 		</cq-code>
+
+		<h3>
+			Operadores aritméticos
+		</h3>
+
+		<p>
+			Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e
+			retornam um único valor númerico. Os operadores aritméticos padrão são os de soma <code>(+)</code>,
+			subtração <code>(-)</code>, multiplicação <code>(*)</code> e divisão <code>(/)</code>.
+		</p>
+
+		<p>
+			Em complemento às operações aritméticas padrões, o JavaScript disponibiliza outros operadores aritméticos,
+			alguns estão listados a seguir:
+		</p>
+
+		<cq-code>
+			x % y 	//Retorna o resto da divisão de x por y
+			x++ 	//Incrementa o valor de x em 1
+			x-- 	//Decrementa o valor de x em 1
+		</cq-code>
+
+		<h3>
+			Operadores lógicos
+		</h3>
+
+		<p>
+			Operadores lógicos são utilizados tipicamente com valores booleanos (lógicos); neste caso, retornam um
+			valor booleano. Os operadores lógicos são o AND lógico <code>&&</code>, o OU lógico <code>||</code> e
+			o operador de negação <code>!</code>.
+		</p>
+
+		<p>
+			O AND lógico retorna true se o valor dos dois operandos for true, retornando false caso contrário. O OU
+			lógico retorna true se o valor de pelo menos um dos operandos for true, retornando false caso contrário.
+			Já operador de negação é um operador unário, que retorna o valor booleano invertido do operando.
+		</p>
+
+		<cq-code>
+			let x = true;
+			let y = false;
+			x && y 		//Retorna false
+			x || y 		//Retorna true
+			!x		//Retorna false
+			x && !y		//Retorna true
+		</cq-code>
+
 	</div>
 </template>
 
@@ -143,7 +131,7 @@ switch (x){
 	const info = {
 		world: 0,
 		level: 2,
-		title: 'Condicionais'
+		title: 'Operadores'
 	};
 
 	export default {

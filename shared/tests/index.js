@@ -10,7 +10,7 @@ export class TestCase {
 	 * @typedef {Object} TestCaseOptions
 	 * @property {String} [description]
 	 * @property {Array} inputs
-	 * @property {Array|Function} outputs
+	 * @property {Object|Function} outputs
 	 */
 
 	/**
@@ -45,7 +45,11 @@ export class TestCase {
 		if (this.outputs instanceof Function) {
 			return this.outputs(result);
 		} else {
-			return this.outputs === result;
+			if (typeof this.outputs === 'object') {
+				return Object.compare(this.outputs, result);
+			} else {
+				return this.outputs === result;
+			}
 		}
 	}
 }

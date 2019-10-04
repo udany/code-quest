@@ -28,14 +28,21 @@
 				</h5>
 
 				<template v-if="testCase.inputs && testCase.inputs.length">
-					<b>Entradas: </b> <code>{{testCase.inputs.toString()}}</code><br>
+					<b>Entradas: </b>
+					<span
+						v-for="(input, idx) of testCase.inputs"
+						:key="idx"
+					>
+						<code class="">{{valueToString(input)}}</code>{{idx+1 !== testCase.inputs.length ? ', ' : ``}}
+					</span>
+					<br>
 				</template>
 
 				<b>Saída: </b> <code>{{caseOutput(testCase)}}</code>
 
 				<template v-if="!test.test(testCase)">
 					<br>
-					<b>Saída esperada: </b> <code>{{testCase.outputs.toString()}}</code>
+					<b>Saída esperada: </b> <code>{{JSON.stringify(testCase.outputs)}}</code>
 				</template>
 			</div>
 		</cq-collapse>
@@ -69,10 +76,13 @@
 			caseOutput(testCase) {
 				const r = this.test.run(testCase);
 
-				if (r === undefined) {
+				return this.valueToString(r);
+			},
+			valueToString(v) {
+				if (v === undefined) {
 					return 'undefined';
 				} else {
-					return r.toString();
+					return JSON.stringify(v);
 				}
 			}
 		}
