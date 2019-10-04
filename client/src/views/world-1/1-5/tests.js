@@ -27,6 +27,7 @@ export const tests = [
                 outputs: 199
             })
         ),
+
     new TestGroup({
         name: 'Contém elemento',
         signature: 'includes(arr, a)',
@@ -51,6 +52,7 @@ export const tests = [
                 outputs: false
             })
         ),
+
     new TestGroup({
         name: 'Soma',
         signature: 'sum(arr)',
@@ -69,6 +71,7 @@ export const tests = [
                 outputs: 0
             })
         ),
+
     new TestGroup({
         name: 'Concatenar',
         signature: 'concat(arr1, arr2)',
