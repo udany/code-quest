@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Meta from 'vue-meta'
 import levelRoutes from '../views/routes/';
+import session from '../util/session';
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -17,7 +18,12 @@ export default new Router({
 		{
 			path: '/login',
 			name: 'login',
-			component: () => import('../views/Login')
+			beforeEnter: (to, from, next) => {
+				if(session.user){
+					next('/');
+				}else next();
+			},
+			component: () => import('../views/Login'),
 		},
 		...levelRoutes
 	]

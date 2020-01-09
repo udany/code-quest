@@ -13,6 +13,10 @@
 							<small>Logado como</small>
 							<span>{{session.user.name}}</span>
 						</div>
+						<button @click="logout">Logout</button>
+					</b-col>
+					<b-col cols="auto" class="login-info" v-else>
+						<button @click="loginPage">Login</button>
 					</b-col>
 				</b-row>
 			</b-container>
@@ -72,6 +76,14 @@
 		}),
 		mounted() {
 			session.load();
+		},
+		methods: {
+			logout() {
+				session.user = null;
+			},
+			loginPage() {
+				this.$router.push('/login');
+			}
 		}
 	}
 </script>
