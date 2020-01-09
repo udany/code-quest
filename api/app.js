@@ -5,6 +5,7 @@ import express from 'express';
 import path from 'path';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
+import session from 'express-session';
 
 
 // APP
@@ -37,6 +38,16 @@ app.use(cors(corsOptionsDelegate));
 app.options('*', cors());
 
 /// =SESSION
+let cookieSecret = 'the.world.is.quiet.here';
+app.use(session({
+	secret: cookieSecret,
+	resave: false,
+	saveUninitialized: false,
+	cookie: {
+		secure: false
+	}
+}));
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

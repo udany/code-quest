@@ -7,6 +7,13 @@
 					<b-col cols="auto" class="py-4">
 						<h1>> Code Quest</h1>
 					</b-col>
+
+					<b-col cols="auto" class="login-info" v-if="session.user">
+						<div class="logged-user">
+							<small>Logado como</small>
+							<span>{{session.user.name}}</span>
+						</div>
+					</b-col>
 				</b-row>
 			</b-container>
 		</div>
@@ -53,14 +60,19 @@
 <script>
 	import { worlds } from '../views/routes/';
 	import FaIcon from '../components/FaIcon';
+	import session from '../util/session';
 
 	export default {
 		name: 'DefaultLayout',
 		components: {FaIcon},
 		data: () => ({
 			worlds,
-			menuClosed: true
-		})
+			menuClosed: true,
+			session
+		}),
+		mounted() {
+			session.load();
+		}
 	}
 </script>
 
@@ -76,6 +88,20 @@
 			font-size: $font-size-md;
 			margin: 0;
 			text-shadow: 0 0 5px rgba(255, 255, 255, .5);
+		}
+
+		.login-info {
+			display: flex;
+			align-items: center;
+
+			.logged-user {
+				small {
+					font-size: $font-size-xxs;
+					opacity: .5;
+					display: block;
+					margin-bottom: -5px;
+				}
+			}
 		}
 
 		height: 50px;
@@ -111,6 +137,7 @@
 		.cq-page-body {
 			padding: 1em 2em;
 			background: #112b42;
+			flex-grow: 1;
 		}
 	}
 

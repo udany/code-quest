@@ -1,6 +1,10 @@
 import {DatabaseField, DatabaseModel} from '../js/DatabaseModel';
 import User from '../../shared/entities/User';
 
+/**
+ * @name UserModel
+ * @extends DatabaseModel<User>
+ */
 class UserModel extends DatabaseModel {}
 
 UserModel.config({

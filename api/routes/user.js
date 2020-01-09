@@ -4,21 +4,61 @@ import UserModel from "../models/UserModel";
 import db from '../Database';
 import User from '../../shared/entities/User';
 import UserController from '../controllers/UserController';
+import {DatabaseQueryCondition} from '../js/DatabaseQueryComponent';
 
 let router = express.Router({});
 
-router.get('/', async function (req, res, next) {
-    let data = await UserModel.select(db);
+router.get('/me', async (req, res) => {
+	let user = req.session.user ? new User(req.session.user) : null;
 
-    res.send(data);
+    res.send(user ? user.Serialize(true) : null);
 });
 
-router.post('/register', async function (req, res, next) {
-    const obj = new User(req.body);
+router.post('/login', async (req, res) => {
 
-    await UserController.register(obj);
+	let users = await UserModel.select(db, [
+		new DatabaseQueryCondition({
+			column: 'email',
+			values: [req.body.loginEmail]
+		})
+	]);
 
-    res.send(obj);
+	if(users.length){
+		let user = users[0];
+
+		let passwordMatch = await UserController.comparePassword(req.body.loginPassword, user.password);
+
+		if(passwordMatch){
+			req.session.user = user;
+
+			res.send({status: true});
+			return;
+		}
+	}
+
+	res.status(401).send({status: false});
+});
+
+router.post('/register', async (req, res) => {
+    const user = new User(req.body);
+
+	let users = await UserModel.select(db, [
+		new DatabaseQueryCondition({
+			column: 'email',
+			values: user.email
+		})
+	]);
+
+	if (users.length) {
+		res.status(409).send({error: 'duplicate_email'});
+		return;
+	}
+
+    await UserController.register(user);
+
+	req.session.user = user;
+
+    res.send(user.Serialize(true));
 });
 
 export default {

@@ -7,7 +7,7 @@ let cfg = {
 	mysql: {
 		host: '174.138.47.54',
 		user: 'unirio',
-		password: 'DwZcpuuvuKr6CYtm',
+		password: '',
 		database: 'code-quest'
 	},
     debug: true

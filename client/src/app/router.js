@@ -14,6 +14,11 @@ export default new Router({
 			name: 'home',
 			redirect: 'level-0-0'
 		},
+		{
+			path: '/login',
+			name: 'login',
+			component: () => import('../views/Login')
+		},
 		...levelRoutes
 	]
 })

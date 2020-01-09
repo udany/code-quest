@@ -17,7 +17,7 @@ User.Attributes = [
 
     new Entity.Attributes.String('name'),
 	new Entity.Attributes.String('email'),
-	new Entity.Attributes.String('password'),
+	new Entity.Attributes.String('password').safe(false),
 	new Entity.Attributes.String('passwordRaw'),
 ];
 
