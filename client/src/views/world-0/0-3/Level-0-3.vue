@@ -35,7 +35,7 @@
         <cq-code>
             let x = 5;
             if (x > 5) {
-            console.log('X é maior que 5.');
+            	console.log('X é maior que 5.');
             }
             //O console.log() não é executado.
         </cq-code>
@@ -48,10 +48,10 @@
         <cq-code>
             let x = 5;
             if (x > 5) {
-            console.log('X é maior que 5.');
+            	console.log('X é maior que 5.');
             } else {
-            console.log('X é menor ou igual a 5.');
-            //O console.log() executado é este
+				console.log('X é menor ou igual a 5.');
+				//O console.log() executado é este
             }
         </cq-code>
 
@@ -63,12 +63,12 @@
         <cq-code>
             let x = 5;
             if (x > 5){
-            console.log('X é maior que 5.');
+            	console.log('X é maior que 5.');
             }else if (x < 5){
-            console.log('X é menor que 5.');
+            	console.log('X é menor que 5.');
             }else{
-            console.log('X é igual a 5.');
-            //O console.log() executado agora é esse
+				console.log('X é igual a 5.');
+				//O console.log() executado agora é esse
             }
         </cq-code>
 
@@ -89,15 +89,17 @@
         <cq-code>
             let x = 5;
             switch (x){
-            case 1:
-            console.log('X igual a 1');
-            break;
-            case 2:
-            console.log('X igual a 2');
-            break;
-            case 5:
-            console.log('X igual a 5');
-            break;
+				case 1:
+					console.log('X igual a 1');
+					break;
+
+				case 2:
+					console.log('X igual a 2');
+					break;
+
+				case 5:
+					console.log('X igual a 5');
+					break;
             }
             //O console.log() executado é o último
         </cq-code>
@@ -121,17 +123,20 @@
         <cq-code>
             let x = 10;
             switch (x){
-            case 1:
-            console.log('X igual a 1');
-            break;
-            case 2:
-            console.log('X igual a 2');
-            break;
-            case 5:
-            console.log('X igual a 5');
-            break;
-            default:
-            console.log('X não encontrado');
+				case 1:
+					console.log('X igual a 1');
+					break;
+
+				case 2:
+					console.log('X igual a 2');
+					break;
+
+				case 5:
+					console.log('X igual a 5');
+					break;
+
+				default:
+					console.log('X não encontrado');
             }
             //O console.log() executado é o último
         </cq-code>

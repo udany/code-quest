@@ -12,9 +12,11 @@
 			No javascript, para declarar uma variável você usa a palavra chave <cq-code inline>let</cq-code>:
 		</p>
 
-<cq-code>let age = 18;
-let name = 'Anakin';
-let group = 'Jedi'; // TODO: Trocar depois do filme 3</cq-code>
+		<cq-code>
+			let age = 18;
+			let name = 'Anakin';
+			let group = 'Jedi'; // TODO: Trocar depois do filme 3
+		</cq-code>
 
 		<p>
 			<b>Dica:</b> Usando o <cq-code inline>//</cq-code> você pode criar comentários para explicar seu código,
@@ -59,9 +61,11 @@ let group = 'Jedi'; // TODO: Trocar depois do filme 3</cq-code>
 			valores com tipos diferentes ao longo da sua vida:
 		</p>
 
-<cq-code>let x;
-x = 42; // x está armazenando um inteiro
-x = 'kek';  // agora x armazena uma string</cq-code>
+		<cq-code>
+			let x;
+			x = 42; // x está armazenando um inteiro
+			x = 'kek';  // agora x armazena uma string
+		</cq-code>
 
 		<p>
 			Isso <b>não significa</b> que não existam tipos no js, e sim que o tipo de uma variável só pode ser aferido

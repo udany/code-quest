@@ -31,7 +31,7 @@
 
         <cq-code>
             for (let i = 0; i < 10; i++) {
-            console.log(i);
+            	console.log(i);
             }
         </cq-code>
 
@@ -54,8 +54,9 @@
 
         <cq-code>
             let i = 0;
+
             for (i; i < 10; i = i + 2) {
-            console.log(i);
+            	console.log(i);
             }
         </cq-code>
 
@@ -71,9 +72,10 @@
 
         <cq-code>
             let i = 0;
+
             while (i < 10) {
-            console.log(i);
-            i++;
+				console.log(i);
+				i++;
             }
         </cq-code>
 
@@ -90,9 +92,10 @@
 
         <cq-code>
             let i = 0;
+
             do {
-            console.log(i);
-            i++;
+				console.log(i);
+				i++;
             } while (i < 10);
         </cq-code>
 
@@ -104,8 +107,8 @@
         <cq-code>
             let i = 10;               ||    let i = 10;
             while (i < 10) {          ||    do {
-            console.log(i);           ||    console.log(i);
-            i++;                      ||    i++;
+				console.log(i);       ||        console.log(i);
+				i++;                  ||        i++;
             }                         ||    } while(i < 10);
             // O console.log não      ||    // O console.log será
             // será executado         ||    // executado 1 vez.
