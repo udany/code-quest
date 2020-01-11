@@ -13,10 +13,10 @@
 							<small>Logado como</small>
 							<span>{{session.user.name}}</span>
 						</div>
-						<button @click="logout">Logout</button>
+						<b-button variant="light" @click="logout">Logout</b-button>
 					</b-col>
 					<b-col cols="auto" class="login-info" v-else>
-						<button @click="loginPage">Login</button>
+						<b-button variant="light" @click="loginPage">Login</b-button>
 					</b-col>
 				</b-row>
 			</b-container>
@@ -37,18 +37,21 @@
 							:key="world.name"
 							class="mb-5"
 						>
-							<h3 class="mb-3">{{world.number}}. {{world.name}}</h3>
-
-							<router-link
-								v-for="level in world.levels"
-								:key="level.name"
-								:to="level.name"
-							>
-								<b>
-									{{level.info.world}}-{{level.info.level}}
-								</b>
-								{{level.info.title}}
-							</router-link>
+							<h3 style="cursor: pointer" class="mb-3" v-b-toggle="'world-'+world.number">
+								{{world.number}}. {{world.name}}
+							</h3>
+							<b-collapse :id="'world-'+world.number">
+								<router-link
+									v-for="level in world.levels"
+									:key="level.name"
+									:to="level.name"
+								>
+									<b>
+										{{level.info.world}}-{{level.info.level}}
+									</b>
+									{{level.info.title}}
+								</router-link>
+							</b-collapse>
 						</section>
 						...
 					</div>
