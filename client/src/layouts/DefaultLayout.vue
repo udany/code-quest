@@ -37,8 +37,9 @@
 							:key="world.name"
 							class="mb-5"
 						>
-							<h3 style="cursor: pointer" class="mb-3" v-b-toggle="'world-'+world.number">
+							<h3 v-on:click="rotateIcon('icon'+world.number)" style="cursor: pointer" class="mb-3" v-b-toggle="'world-'+world.number">
 								{{world.number}}. {{world.name}}
+								<font-awesome-icon :id="'icon'+world.number" class="rotate" :icon="['fas', 'caret-down']" />
 							</h3>
 							<b-collapse :id="'world-'+world.number">
 								<router-link
@@ -86,6 +87,9 @@
 			},
 			loginPage() {
 				this.$router.push('/login');
+			},
+			rotateIcon(id) {
+				document.getElementById(id).classList.toggle('down');
 			}
 		}
 	}

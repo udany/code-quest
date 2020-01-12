@@ -144,6 +144,18 @@ mark, .mark {
 	color: white;
 }
 
+.rotate{
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.rotate.down{
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
 code {
 	padding: .2em .3em;
 	border-radius: .3em;
