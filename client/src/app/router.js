@@ -25,6 +25,11 @@ export default new Router({
 			},
 			component: () => import('../views/Login'),
 		},
+		{
+			path: '/achievements',
+			name: 'achievements',
+			component: () => import('../views/Achievements')
+		},
 		...levelRoutes
 	]
 })
