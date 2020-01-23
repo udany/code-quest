@@ -54,10 +54,18 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'static')));
 app.use('/data/', express.static('data'));
 
+//Get parameter from run command
+let parameter = process.argv.find(arg => arg.startsWith('env'));
+if (!parameter) parameter = 'env=remote';
+
 // Load all routes
+let envs = parameter.split('=')[1].split(',');
 let glob = require('glob');
-let pattern = path.join(__dirname, 'routes', '*.js');
-let routeFiles = glob.sync(pattern);
+let routeFiles =[];
+for (let env of envs){
+    let pattern = path.join(__dirname, 'routes', env, '*.js');
+    routeFiles.push(...glob.sync(pattern));
+}
 
 for (let file of routeFiles) {
     let route = require(file).default;

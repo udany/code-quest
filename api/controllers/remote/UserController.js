@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
-import UserModel from '../models/UserModel';
-import db from '../Database';
+import UserModel from '../../models/UserModel';
+import db from '../../Database';
 
 const UserController = {
 

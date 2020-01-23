@@ -1,10 +1,10 @@
 import express from 'express';
-import UserModel from "../models/UserModel";
+import UserModel from "../../models/UserModel";
 
-import db from '../Database';
-import User from '../../shared/entities/User';
-import UserController from '../controllers/UserController';
-import {DatabaseQueryCondition} from '../js/DatabaseQueryComponent';
+import db from '../../Database';
+import User from '../../../shared/entities/User';
+import UserController from '../../controllers/remote/UserController';
+import {DatabaseQueryCondition} from '../../js/DatabaseQueryComponent';
 
 let router = express.Router({});
 

@@ -69,6 +69,7 @@
 	import { worlds } from '../views/routes/';
 	import FaIcon from '../components/FaIcon';
 	import session from '../util/session';
+	import localApi from "../util/localApi";
 
 	export default {
 		name: 'DefaultLayout',
@@ -80,6 +81,7 @@
 		}),
 		mounted() {
 			session.load();
+			this.test();
 		},
 		methods: {
 			logout() {
@@ -90,6 +92,10 @@
 			},
 			rotateIcon(id) {
 				document.getElementById(id).classList.toggle('down');
+			},
+			async test(){
+				//let response = await localApi.get('/Solution/world-1/1-2/index');
+				//localApi.post('/Solution/world-1/1-2/teste', {content: 'Hello_World();'});
 			}
 		}
 	}
