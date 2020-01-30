@@ -23,6 +23,6 @@ router.post('/Solution/*', (req, res) => {
 });
 
 export default {
-	path: '/',
+	path: '/local',
 	router
 }

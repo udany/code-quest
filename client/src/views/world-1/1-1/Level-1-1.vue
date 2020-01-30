@@ -2,6 +2,8 @@
 	<div>
 		<h3>1-1 - Molhando os pés</h3>
 
+		<SolutionSyncManager :level="1" :world="1" />
+
 		<Quotes author="Lemony Snicket" book="The Penultimate Peril">
 			Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade.
 		</Quotes>
@@ -19,6 +21,7 @@
 	import { tests } from './tests';
 	import TestGroup from '../../../components/TestGroup';
 	import Quotes from "../../../components/Quotes";
+	import SolutionSyncManager from "../../../components/SolutionSyncManager";
 
 	const info = {
 		world: 1,
@@ -28,7 +31,7 @@
 
 	export default {
 		name: 'Level-1-1',
-		components: {Quotes, TestGroup},
+		components: {SolutionSyncManager, Quotes, TestGroup},
 		info,
 		metaInfo (){
 			return {
