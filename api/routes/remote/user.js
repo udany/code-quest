@@ -39,6 +39,17 @@ router.post('/login', async (req, res) => {
 	res.status(401).send({status: false});
 });
 
+router.post('/logout', async (req, res) => {
+	if(!req.session.user){
+		res.status(404).send('Usuário não está logado.');
+		return;
+	}
+
+	req.session.user = null;
+
+	res.status(200).send({status: true});
+});
+
 router.post('/register', async (req, res) => {
     const user = new User(req.body);
 
