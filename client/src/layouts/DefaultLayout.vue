@@ -90,7 +90,12 @@
 				session.user = null;
 			},
 			loginPage() {
-				this.$router.push('/login');
+				this.$router.push({
+					path: '/login',
+					query: {
+						returnUrl: this.$route.fullPath
+					}
+				});
 			},
 			rotateIcon(id) {
 				document.getElementById(id).classList.toggle('down');
