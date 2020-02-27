@@ -5,7 +5,9 @@
   "author": "udany",
   "private": true,
   "scripts": {
-    "start": "node -r babel-register www.js"
+    "start": "node www.js env=local",
+    "start-remote": "node www.js env=remote",
+    "start-all": "node www.js env=local,remote"
   },
   "dependencies": {
     "axios": "^0.17.1",
