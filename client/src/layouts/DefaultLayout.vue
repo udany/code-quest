@@ -9,11 +9,11 @@
 					</b-col>
 
 					<b-col cols="auto" class="login-info" v-if="session.user">
-						<div class="logged-user">
+						<div class="logged-user mr-4">
 							<small>Logado como</small>
 							<span>{{session.user.name}}</span>
 						</div>
-						<b-button variant="light" @click="logout">Logout</b-button>
+						<b-button size="sm" variant="light" @click="logout">Logout</b-button>
 					</b-col>
 					<b-col cols="auto" class="login-info" v-else>
 						<b-button variant="light" @click="loginPage">Login</b-button>
@@ -69,7 +69,7 @@
 	import { worlds } from '../views/routes/';
 	import FaIcon from '../components/FaIcon';
 	import session from '../util/session';
-	import localApi from "../util/localApi";
+	import api from '../util/api';
 
 	export default {
 		name: 'DefaultLayout',
@@ -84,18 +84,21 @@
 			this.test();
 		},
 		methods: {
-			logout() {
+			async logout() {
+				await api.post('/user/logout');
+
 				session.user = null;
 			},
 			loginPage() {
-				this.$router.push('/login');
+				this.$router.push({
+					path: '/login',
+					query: {
+						returnUrl: this.$route.fullPath
+					}
+				});
 			},
 			rotateIcon(id) {
 				document.getElementById(id).classList.toggle('down');
-			},
-			async test(){
-				//let response = await localApi.get('/Solution/world-1/1-2/index');
-				//localApi.post('/Solution/world-1/1-2/teste', {content: 'Hello_World();'});
 			}
 		}
 	}

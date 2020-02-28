@@ -2,6 +2,8 @@
     <div>
         <h3>1-2 - Andando pro fundo</h3>
 
+		<SolutionSyncManager :level="2" :world="1" :tests="tests" />
+
 		<Quotes author="Lemony Snicket" book="The Austere Academy">
 			Ler é uma forma de escape, correr pela sua vida é outra.
 		</Quotes>
@@ -27,6 +29,7 @@
     import Quotes from "../../../components/Quotes";
     import TestGroup from "../../../components/TestGroup";
     import {tests} from "./tests";
+    import SolutionSyncManager from '../../../components/SolutionSyncManager';
 
     const info = {
 	    world: 1,
@@ -36,7 +39,7 @@
 
     export default {
         name: "Level-1-2",
-        components: {Quotes, TestGroup},
+        components: { SolutionSyncManager, Quotes, TestGroup},
 	    info,
 	    metaInfo (){
 		    return {

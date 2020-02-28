@@ -63,7 +63,9 @@
 
 					if (data.status) {
 						session.load();
-						this.$router.push('/');
+
+						let path = this.$route.query.returnUrl || '/';
+						this.$router.push(path);
 					}
 				} catch (e) {
 					alert('Erro ao realizar o login.');
@@ -84,7 +86,7 @@
 				}
 
 				try {
-					let response = await api.post('/user/register', {
+					await api.post('/user/register', {
 						passwordRaw: this.registerPassword,
 						name: this.registerName,
 						email: this.registerEmail

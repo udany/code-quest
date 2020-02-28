@@ -2,7 +2,7 @@
 	<div>
 		<h3>1-1 - Molhando os pés</h3>
 
-		<SolutionSyncManager :level="1" :world="1" />
+		<SolutionSyncManager :level="1" :world="1" :tests="tests" />
 
 		<Quotes author="Lemony Snicket" book="The Penultimate Peril">
 			Pessoas más raramente tem tempo para ler, é um dos motivos pra sua maldade.
