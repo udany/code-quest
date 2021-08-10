@@ -1,0 +1,174 @@
+//// Typography
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+/// Default
+html {
+	font-family: $font-default;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: $font-size-md;
+	color: $light;
+}
+
+p {
+	p + p {
+		margin-top: .8em;
+	}
+
+	a {
+		color: $highlight;
+		font-weight: bold;
+	}
+}
+
+mark, .mark {
+	padding: 0.1em 0.2em;
+	background-color: #c58923;
+	color: white;
+}
+
+
+// Headers
+h1, h2, h3, h4, h5, h6 {
+	color: #fff;
+	font-family: $font-title;
+	font-weight: 400;
+	text-shadow: 0 0 15px rgba(50, 50, 50, 1);
+
+	p + & {
+		margin-top: .8em;
+	}
+	& + & {
+		margin-top: .5em;
+	}
+	margin-bottom: .3em;
+
+	.rb-icon {
+		transform: scale(.8);
+	}
+
+	small {
+		font-size: .5em;
+		font-weight: 300;
+		transform: translateY(-.2em);
+		display: inline-block;
+		margin-left: .5em;
+	}
+}
+
+h1 { font-size: $font-size-xxl; }
+h2 { font-size: $font-size-xl; }
+h3 { font-size: $font-size-lg; }
+h4 { font-size: $font-size-md; }
+h5 { font-size: $font-size-sm; }
+h6 { font-size: $font-size-xs; }
+
+// Links
+a {
+	transition: all 0.5s ease 0s;
+	color: $primary-2;
+	text-decoration: none;
+
+	&.router-link-exact-active {
+		color: darken($primary-2, 10%);
+	}
+
+	&:hover {
+		color: $light;
+	}
+
+	.rb-icon {
+		transition: filter 0.5s ease 0s;
+	}
+}
+
+a:hover, a:focus {
+	text-decoration: none !important;
+}
+
+// Code
+code {
+	padding: .2em .3em;
+	border-radius: .3em;
+	background: rgba(black, .1);
+}
+
+pre {
+	padding: .5em .8em;
+	border-radius: .3em;
+	background: rgba(black, .2);
+	color: inherit;
+	font-size: inherit;
+
+	code {
+		padding: 0;
+		border-radius: 0;
+		background: none;
+	}
+}
+
+// Responsiveness
+@include media-breakpoint-down(xs) {
+	html {
+		font-family: $font-default;
+		font-size: 50%;
+	}
+}
+
+// Etc
+::selection {
+	background: darken($secondary, 15%);
+}
+
+/// Utility classes
+.text {
+	&-xxl {
+		font-size: $font-size-xxl;
+	}
+	&-xl {
+		font-size: $font-size-xl;
+	}
+	&-lg {
+		font-size: $font-size-lg;
+	}
+	&-md {
+		font-size: $font-size-md;
+	}
+	&-sm {
+		font-size: $font-size-sm;
+	}
+	&-xs {
+		font-size: $font-size-xs;
+	}
+	&-xxs {
+		font-size: $font-size-xxs;
+	}
+
+	&-title {
+		font-family: $font-title;
+	}
+}
+
+.ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.single-line {
+	white-space: nowrap;
+}
+
+.rotate{
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.rotate.down{
+	-moz-transform:rotate(180deg);
+	-webkit-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
