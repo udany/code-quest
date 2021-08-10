@@ -13,10 +13,11 @@ body {
 	color: $light;
 }
 
+* + p, * + pre {
+	margin-top: 1.2em;
+}
+
 p {
-	p + p {
-		margin-top: .8em;
-	}
 
 	a {
 		color: $highlight;
@@ -39,12 +40,13 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 0 0 15px rgba(50, 50, 50, 1);
 
 	p + & {
-		margin-top: .8em;
+		margin-top: 1.5em;
 	}
 	& + & {
 		margin-top: .5em;
 	}
-	margin-bottom: .3em;
+
+	margin-bottom: .6em;
 
 	.rb-icon {
 		transform: scale(.8);

@@ -44,4 +44,9 @@
 	}
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	pre {
+		margin-left: -.8em;
+		margin-right: -.8em;
+	}
+</style>
