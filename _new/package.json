@@ -29,6 +29,7 @@
 		"socket.io-client": "^4.1.2",
 		"vite": "^2.3.0",
 		"vue": "^3.1.4",
+		"vue-meta": "^3.0.0-alpha.9",
 		"vue-router": "^4.0.8"
 	}
 }

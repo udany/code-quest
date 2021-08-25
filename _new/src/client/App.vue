@@ -1,5 +1,9 @@
 <template>
 	<component class="base-layout" :is="layout">
+		<metainfo>
+			<template v-slot:title="{ content }">{{ content ? content + ' - ' : '' }}Code Quest</template>
+		</metainfo>
+
 		<router-view />
 	</component>
 </template>
@@ -8,6 +12,7 @@
 	import DefaultLayout from './layouts/DefaultLayout.vue';
 	import { computed } from 'vue';
 	import { useRoute } from 'vue-router';
+	import { useActiveMeta } from 'vue-meta';
 
 	export default {
 		name: 'App',
