@@ -1,0 +1,12 @@
+input, textarea {
+	color: #efefef;
+	background: rgba(0,0,0,.5);
+	border: none;
+	border-bottom: 1px solid #FCFCFF;
+	padding: 2px 5px;
+	box-shadow: 0 0 20px 0 rgba(50, 50, 50, .5);
+}
+
+input:focus, textarea:focus, button:focus, button:active:focus{
+	outline: none !important;
+}
