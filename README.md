@@ -9,7 +9,7 @@ antes caso já não esteja instalado (na dúvida, escolham a versão LTS),
 depois siga as instruções abaixo:
 
 - Na **primeira vez** que você for rodar, abra o arquivo `setup.bat` que está
-na pasta inicial, isso instalará todas as dependência necessárias pra rodar.
+  na pasta inicial, isso instalará todas as dependência necessárias pra rodar.
 - Posteriormente você pode rodar o arquivo `start.bat` pra iniciar o projeto.
 
 ## Como preservar suas soluções?
