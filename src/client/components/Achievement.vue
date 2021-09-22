@@ -1,23 +1,23 @@
 <template>
-    <b-row class="achievement">
-        <b-col class="achievCol" cols="1">
+    <div class="row achievement">
+        <div class="col col-1 achievCol">
             <img :src="achievement.image" alt="">
-        </b-col>
-        <b-col>
-            <b-row>
+        </div>
+        <div class="col">
+            <div class="row">
                 <h4>{{achievement.name}}</h4>
-            </b-row>
-            <b-row>
+            </div>
+            <div class="row">
                 <p>
                     {{achievement.description}}
                 </p>
-            </b-row>
-        </b-col>
-    </b-row>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-    import Achievement from '../../../shared/entities/Achievement'
+    import Achievement from '../../shared/entities/Achievement.js'
 
     export default {
         name: "Achievement",

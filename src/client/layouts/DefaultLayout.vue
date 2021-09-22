@@ -95,6 +95,8 @@
 		right: 0;
 		top: 0;
 
+		z-index: 10;
+
 		h1 {
 			font-size: $font-size-lg;
 			margin: 0;

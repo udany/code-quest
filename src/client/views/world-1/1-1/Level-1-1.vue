@@ -11,6 +11,8 @@
 			nele para que elas retornem os resultados esperados, os testes abaixo irão atualizar conforme você for completando elas.
 		</p>
 
+		<CodeEditor :world="info.world" :level="info.level" />
+
 		<test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
 	</div>
 </template>
@@ -20,6 +22,7 @@
 	import TestGroup from "../../../components/TestGroup.vue";
 
 	import { tests } from './tests';
+	import CodeEditor from '../../../components/CodeEditor.vue';
 
 	const info = {
 		world: 1,
@@ -29,7 +32,7 @@
 
 	export default {
 		name: 'Level-1-1',
-		components: { Quotes, TestGroup },
+		components: { CodeEditor, Quotes, TestGroup },
 		info,
 		metaInfo (){
 			return {
@@ -37,7 +40,8 @@
 			}
 		},
 		data: () => ({
-			tests
+			info,
+			tests,
 		}),
 	}
 </script>

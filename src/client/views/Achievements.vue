@@ -1,29 +1,29 @@
 <template>
-    <bContainer fluid>
-        <b-row>
-            <b-col>
+    <div class="container container-fluid">
+        <div class="row">
+            <div class="col">
                 <h3 class="mt-4 mb-2">
                     Achievements
 
                 </h3>
-            </b-col>
-        </b-row>
-        <b-row>
-            <b-col>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <Achievement
                     v-for="achievement in achievements"
                     :key="achievement.name"
                     :achievement="achievement"
                 >
                 </Achievement>
-            </b-col>
-        </b-row>
-    </bContainer>
+            </div>
+        </div>
+	</div>
 </template>
 
 <script>
-    import Achievement from '../components/Achievement';
-    import achievements from '../../../shared/entities/achievements';
+    import Achievement from '../components/Achievement.vue';
+    import achievements from '../../shared/entities/achievements';
 
     export default {
         name: "Achievements",

@@ -1,6 +1,6 @@
 import {TestCase, TestGroup} from '../../../../shared/tests';
 
-import {factorial, pow, squareRoot, triangleCheck} from "../../../../../solutions/world-1/1-3";
+import {factorial, pow, squareRoot, triangleCheck} from "../../../../solutions/world-1/1-3";
 
 export const tests = [
     new TestGroup({

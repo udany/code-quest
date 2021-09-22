@@ -1,6 +1,6 @@
 import {TestCase, TestGroup} from '../../../../shared/tests';
 
-import {divide, multiply, subtract, sum} from '../../../../../solutions/world-1/1-1';
+import {divide, multiply, subtract, sum} from '../../../../solutions/world-1/1-1';
 
 export const tests = [
 	new TestGroup({
@@ -30,6 +30,7 @@ export const tests = [
 			outputs: 2
 		})
 	),
+
 	new TestGroup({
 		name: 'Subtração',
 		signature: 'subtract(a, b)',
@@ -57,6 +58,7 @@ export const tests = [
 			outputs: -0.5
 		})
 	),
+
 	new TestGroup({
 		name: 'Multiplicação',
 		signature: 'multiply(a, b)',
@@ -84,6 +86,7 @@ export const tests = [
 			outputs: 0.5
 		})
 	),
+
 	new TestGroup({
 		name: 'Divisão',
 		signature: 'divide(a, b)',

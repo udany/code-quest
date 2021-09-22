@@ -105,13 +105,22 @@
         </p>
 
         <cq-code>
-            let i = 10;               ||    let i = 10;
-            while (i &lt; 10) {          ||    do {
-				console.log(i);       ||        console.log(i);
-				i++;                  ||        i++;
-            }                         ||    } while(i &lt; 10);
-            // O console.log não      ||    // O console.log será
-            // será executado         ||    // executado 1 vez.
+            let i = 10;
+            while (i &lt; 10) {
+				console.log(i);
+				i++;
+            }
+            // O console.log não
+            // será executado
+
+
+			let i = 10;
+			do {
+				console.log(i);
+				i++;
+			} while(i &lt; 10);
+			// O console.log será
+			// executado 1 vez.
         </cq-code>
     </div>
 </template>

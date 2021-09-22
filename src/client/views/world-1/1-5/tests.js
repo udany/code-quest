@@ -1,6 +1,6 @@
 import {TestCase, TestGroup} from '../../../../shared/tests';
 
-import {concat, highestNumber, includes, arraySum} from "../../../../../solutions/world-1/1-5";
+import {concat, highestNumber, includes, arraySum} from "../../../../solutions/world-1/1-5";
 
 
 export const tests = [
