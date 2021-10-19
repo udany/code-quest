@@ -11,7 +11,7 @@
 			</button>
 		</div>
 
-		<div class="code-editor" ref="editor"></div>
+		<div class="code-editor" ref="editor" :style="{ height: height + 'px' }"></div>
 	</div>
 </template>
 
@@ -25,7 +25,8 @@
 		components: { FaIcon },
 		data: () => ({
 			contents: null,
-			saving: false
+			saving: false,
+			height: 300
 		}),
 		props: {
 			world: {
@@ -61,6 +62,20 @@
 
 			this.editor.onDidChangeModelContent(() => {
 				this.contents = this.editor.getValue();
+			});
+
+			let ignoreSizeChange = false;
+			this.editor.onDidContentSizeChange(() => {
+				const contentHeight = Math.max(100, this.editor.getContentHeight());
+				this.height = contentHeight;
+
+				try {
+					ignoreSizeChange = true;
+
+					this.editor.layout({ width: this.$refs.editor.getBoundingClientRect().width, height: contentHeight });
+				} finally {
+					ignoreSizeChange = false;
+				}
 			});
 		},
 
@@ -101,7 +116,5 @@
 		}
 	}
 
-	.code-editor {
-		height: 500px;
-	}
+	.code-editor {}
 </style>
