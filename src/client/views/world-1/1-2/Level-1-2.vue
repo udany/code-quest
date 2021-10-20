@@ -19,15 +19,16 @@
 			</a>
 		</p>
 
-        <test-group v-for="test in tests" :key="test.name" :test="test"></test-group>
+		<CodeEditor :world="info.world" :level="info.level" />
+
+		<tests-1-2 />
     </div>
 </template>
 
 <script>
 	import Quotes from "../../../components/Quotes.vue";
-	import TestGroup from "../../../components/TestGroup.vue";
-
-    import {tests} from "./tests";
+	import CodeEditor from '../../../components/CodeEditor.vue';
+	import Tests12 from './Tests-1-2.vue';
 
     const info = {
 	    world: 1,
@@ -37,7 +38,7 @@
 
     export default {
         name: "Level-1-2",
-        components: { Quotes, TestGroup },
+        components: { Tests12, CodeEditor, Quotes },
 	    info,
 	    metaInfo (){
 		    return {
@@ -45,7 +46,7 @@
 		    }
 	    },
         data: () => ({
-            tests
+			info
         }),
     }
 </script>
