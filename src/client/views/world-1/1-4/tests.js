@@ -1,6 +1,6 @@
 import {TestCase, TestGroup} from '../../../../shared/tests';
 
-import {hasAtSign, isValidEmail, palindrome, spaceRemoval, substring} from "../../../../../solutions/world-1/1-4";
+import {hasAtSign, isValidEmail, palindrome, spaceRemoval, substring} from "../../../../solutions/world-1/1-4";
 
 export const tests = [
     new TestGroup({

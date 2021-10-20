@@ -40,6 +40,11 @@ function createViteConfig(options = defaultOptions) {
 					importer: function () { return null; }
 				}
 			}
+		},
+		server: {
+			fs: {
+				allow: ['..']
+			}
 		}
 	});
 }

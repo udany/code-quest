@@ -1,6 +1,6 @@
 import {TestCase, TestGroup} from '../../../../shared/tests';
 
-import {areaOfCircle, areaOfRectangle, divisor, isOdd, isPrime} from "../../../../../solutions/world-1/1-2";
+import {areaOfCircle, areaOfRectangle, divisor, isOdd, isPrime} from "../../../../solutions/world-1/1-2";
 
 export const tests = [
     new TestGroup({
