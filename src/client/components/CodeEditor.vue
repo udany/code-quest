@@ -47,6 +47,9 @@
 				language: 'javascript',
 				theme: "vs-dark",
 				scrollBeyondLastLine: false,
+				scrollbar: {
+					alwaysConsumeMouseWheel: false
+				}
 			});
 
 			this.editor.addAction({
