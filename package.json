@@ -29,7 +29,7 @@
 		"sass": "^1.32.13",
 		"socket.io": "^4.1.2",
 		"socket.io-client": "^4.1.2",
-		"vite": "^2.3.8",
+		"vite": "^2.9.13",
 		"vue": "^3.1.4",
 		"vue-meta": "^3.0.0-alpha.9",
 		"vue-router": "^4.0.8"
